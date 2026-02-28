@@ -1,0 +1,328 @@
+/* Define CSS variables globally */
+:root {
+  --primary-color: rgba(107, 166, 234, 1); /* Main blue colour */
+  --secondary-color: rgba(237, 237, 237, 1); /* Light background colour for sections */
+  --background-color: rgba(1, 1, 1, 1); /* Background colour for the body */
+  --text-color: rgba(237, 237, 237, 1);; /* General text colour */
+  --button-text-color: rgba(237, 237, 237, 1);; /* Text colour for buttons */
+  --hover-color: rgba(107, 166, 234, 1);; /* Button hover colour */
+}
+
+body {
+  margin: 0;
+  font-family: Plus Jakarta Sans, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.pageContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 4px 8px var(--secondary-color, 0.1);
+  line-height: 1.6; /* Improve readability */
+}
+
+/* styles for Knowth and Dowth */
+.siteContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.sitesHeader {
+  grid-column: 1 / -1;
+}
+
+.sitesContent {
+  grid-column: 1;
+}
+
+.figureImgside {
+  grid-column: 2;
+}
+
+.sitesImgTop, .sitesImgaside {
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 8px var(--secondary-color, 0.1);
+}
+
+/* to make images responsive */
+.siteContainer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .siteContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* styles for the visitor centre page */
+  #centreImg {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 8px var(--secondary-color, 0.1);
+  }
+
+.visitorh3 {
+  margin: 0px 0px 5px 0px;
+}
+
+.visitorP {
+  margin: 0px 0px 25px 0px;
+}
+
+#visitorBtnsDiv {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;  /* Centres buttons horizontally */
+  gap: 3rem;  
+}
+
+.visitorBtn {
+  padding: 0.75rem 1.5rem;;
+  border: 0.5px var(--background-color) solid;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 4px var(--secondary-color, 0.2); 
+  cursor: pointer;
+}
+
+.visitorBtn:hover {
+  background: var(--hover-color);
+}
+
+/* styles of the support page */
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 20px;
+}
+
+/* Make the 5th card span full width */
+.row .column:nth-child(5) {
+  grid-column: 1 / -1;
+}
+
+.column {
+  flex: 1 1 33.3%;
+  padding: 0 8px;
+}
+
+.cardContainer {
+  position: relative;  /* IMPORTANT */
+  box-shadow: 2px 2px 8px var(--secondary-color, 0.1);
+  overflow: hidden; /* keeps overlay clean */
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 2rem;
+}
+
+.cardContainer figure {
+  margin: 0;    /* remove default figure margin */
+}
+
+.cardImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Text overlay */
+.textContainer {
+  box-sizing: border-box; /* prevents overflow */
+  position: absolute;
+  bottom: 0;   /* stick to bottom */
+  left: 0;
+  width: 100%;
+  padding: 2px 15px 15px 15px;
+  background: rgba(0, 0, 0, 0.6);   /* darker overlay */
+  color: var(--secondary-color);
+  border-radius: 2rem;
+}
+
+.cardBtn {
+  display: block;
+  margin-left: auto;
+  padding: 0.75rem 1.5rem;;
+  border: 0.5px var(--background-color) solid;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 4px var(--secondary-color, 0.2); 
+  cursor: pointer;
+}
+
+.cardBtn:hover {
+  background: var(--hover-color);
+}
+
+/* styles and positioning for the 5th card container */
+.row .column:nth-child(5) .cardContainer {
+  max-width: 100%;
+}
+
+/* Remove overlay positioning for 5th card */
+.row .column:nth-child(5) .textContainer {
+  position: static;
+  background: none;
+  color: var(--secondary-color);
+  border-radius: 2rem;
+  width: 100%;
+}
+
+/* Make 5th card horizontal */
+.row .column:nth-child(5) .cardContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Image on the right */
+.row .column:nth-child(5) figure {
+  order: 2;
+  width: 50%;
+}
+
+.row .column:nth-child(5) .cardImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Text on the left */
+.row .column:nth-child(5) .textContainer {
+  order: 1;
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr; /* stack cards */
+  }
+
+  .row .column:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .row .column:nth-child(5) .cardContainer {
+    flex-direction: column;
+  }
+}
+
+/* styles of the contact page */
+#contactContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#contactBox {
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+  margin: 10px auto 0px;
+}
+
+#contactImgBox {
+  flex: 2;
+  min-width: 100px;
+  margin: auto;
+  padding: 10px;
+}
+
+#contactImg {
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 8px var(--secondary-color, 0.1);
+}
+
+#contactBox a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* styles of the footer page */
+footer {
+  padding: 40px 20px;
+}
+
+#footerWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#footerAddressDiv {
+  flex: 1;
+  min-width: 200px;
+}
+
+#footerAddress a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+#navFooter {
+  flex: 2;
+  min-width: 300px;
+}
+
+#footerAddressDiv, #navFooter {
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+#navFooter ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 0.5rem 2rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li a {
+  display: block;
+  color: var(--text-color);
+  text-align: left;
+  text-decoration: none;
+  padding: 0px 0px 0px 20px;
+}
+
+li a:hover {
+  color: var(--primary-color);
+}
+
+small {
+  margin: 1.4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #footerWrapper {
+    flex-direction: column;
+  }
+
+  #navFooter ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #navFooter ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+
