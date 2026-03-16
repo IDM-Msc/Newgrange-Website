@@ -250,3 +250,37 @@ body {
   flex-shrink: 0;      
   margin-top: 6px;
 }
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: scroll 10s linear infinite;
+}
+
+.marquee-track span {
+  font-family: 'Raflesia', serif;
+  color: white;
+  white-space: nowrap;
+  font-size: clamp(3rem, 8vw, 10rem );
+  letter-spacing: 1rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  transition: transform 0.3s ease-out;
+}
+
+.divider {
+  width: 40px;
+  margin: 0 2rem;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
