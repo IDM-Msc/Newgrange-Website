@@ -5,6 +5,7 @@
   <title>Parallax Homepage</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -88,6 +89,108 @@
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <section class="history-hero">
+    <h1 class="history-title">HISTORY OF NEWGRANGE</h1>
+  </section>
+
+  <section class="timeline">
+
+    <div class="timeline-item right">
+      <div class="timeline-img-wrapper">
+        <img src="hist1.png" alt="" class="timeline-img" alt="">
+      </div>
+      <div class="timeline-content">
+        <h2>3200 B.C.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-img-wrapper">
+        <img src="hist2.png" alt="" class="timeline-img">
+      </div>
+      <div class="timeline-content">
+        <h2>2500 B.C.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-img-wrapper">
+        <img src="hist3.png" alt="" class="timeline-img">
+      </div>
+      <div class="timeline-content">
+        <h2>1699 A.D.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-img-wrapper">
+        <img src="hist4.png" alt="" class="timeline-img">
+      </div>
+    </div>
+
+    <!--Last item in the timeline-->
+    <div class="timeline-item-last">
+    <div class="timeline-content">
+      <h2>1967 A.D.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+         sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+    </div>
+  </div>
+  </section>
+
+  <!--BOOKS CAROUSEL-->
+  <section class="book-carousel">
+  <h2 class="carousel-title">ADDITIONAL READING</h2>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide">
+        <div class="book-card">
+          <img src="book1.png" alt="Newgrange Archeoogy, Art and Legend">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="book-card">
+          <img src="book2.png" alt="Newgrange by Geraldine Stout">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="book-card">
+          <img src="book3.png" alt="Exploring the majestic passage tombs of ancient Ireland">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="book-card">
+          <img src="book4.png" alt="The story of Newgrange">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="book-card">
+          <img src="book5.png" alt="Mythical Ireland">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div>
+      <div class="carousel-controls">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="carousel.js"></script>
 </body>
 </html>

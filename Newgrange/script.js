@@ -1,4 +1,5 @@
 const title = document.querySelector('.hero-title');
+const items = document.querySelectorAll('.timeline-item');
 
 window.addEventListener('scroll', () => {
   let scrollValue = window.scrollY;
@@ -7,3 +8,4 @@ window.addEventListener('scroll', () => {
 
 const track = document.getElementById("marquee-track");
 track.innerHTML += track.innerHTML;
+
