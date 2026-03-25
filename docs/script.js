@@ -6,7 +6,7 @@ window.addEventListener('scroll', () => {
   title.style.transform = `translateY(${scrollValue * -0.5}px)`;
 });
 
-const track = document.getElementById("marquee-track");
+const track = document.getElementById("hero-track");
 track.innerHTML += track.innerHTML;
 
 const timeline = document.querySelector('.timeline');

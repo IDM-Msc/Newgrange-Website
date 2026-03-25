@@ -15,6 +15,22 @@ body {
   background: #000;
 }
 
+.top-decoration {
+  position: absolute;
+  top: -70rem;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+  scale: 70%;
+}
+
+.top-decoration img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* HERO SECTION */
 .hero {
   height: 100vh;
@@ -106,8 +122,8 @@ body {
 
 .explore-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 800;
   margin-bottom: 20px;
   text-align: left; 
 }
@@ -115,15 +131,74 @@ body {
 /* Container for four images side by side */
 .explore-images {
   display: flex;
-  justify-content: flex-start; 
-  gap: 20px;   
-  flex-wrap: wrap;  
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: nowrap;
 }
 
-.explore-images img {
-  width: calc(25% - 15px); 
-  height: auto;
+.explore-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 80px;
+}
+
+.explore-card img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+/* button */
+.explore-button {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: rgba(255, 255, 255, 0.484);
+  backdrop-filter: blur(2px);
+
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 550;
+  color: #000;
+
+  height: 48px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.arrow {
+  transform: scale(1.5)  translateX(5px);
+}
+
+/* individual sizes */
+.history-img {
+  width: 25%;
+  height: 550px;
+}
+
+.visitor-img {
+  width: 25%;
+  height: 220px;
+}
+
+.solstice-img {
+  width: 25%;
+  height: 450px;
+}
+
+.sites-img {
+  width: 25%;
+  height: 350px;
 }
 
 @media (max-width: 800px) {
@@ -210,29 +285,46 @@ body {
   width: 100%;
   position: relative;
   z-index: 2;
+  top: 30px;
 }
 .info-text1 {
   position: absolute;
   /* slightly above the image */
-  top: -15%;               
-  left: 50%;
+  top: -80%;               
+  left: 47%;
   transform: translateX(-40%);
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 12vw;        
-  font-weight: 700;      
+  font-size: 18vw;        
+  font-weight: 800;      
   color: white;
+  letter-spacing: 0rem;
   
 }
 .info-text2 {
   position: absolute;
   /* slightly above the image */
-  top: -25%;
-  left: 50%;
+  top: -55%;
+  left: 40%;
   transform: translateX(-40%);
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 12vw;         
-  font-weight: 700;        
+  font-size: 17vw;         
+  font-weight: 800;        
   color: white;
+  letter-spacing: 0rem;
+  
+}
+
+.info-text3 {
+  position: absolute;
+  /* slightly above the image */
+  top: -48%;
+  left: 40%;
+  transform: translateX(-40%);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17vw;         
+  font-weight: 800;        
+  color: white;
+  letter-spacing: 0rem;
   
 }
 
@@ -252,19 +344,19 @@ body {
   margin-top: 6px;
 }
 
-.marquee {
+.track {
   overflow: hidden;
   width: 100%;
 }
 
-.marquee-track {
+.hero-track {
   display: flex;
   align-items: center;
   width: max-content;
   animation: scroll 10s linear infinite;
 }
 
-.marquee-track span {
+.hero-track span {
   font-family: 'Raflesia', serif;
   color: white;
   white-space: nowrap;
@@ -299,7 +391,8 @@ body {
   font-family: 'Raflesia', serif;
   color: white;
   font-size: clamp(3rem, 8vw, 10rem);
-  letter-spacing: 2rem;
+  font-weight:20;
+  letter-spacing: 0.6rem;
   margin: 0 auto;
 }
 
@@ -520,6 +613,8 @@ body {
   font-family: 'Raflesia', serif;
   font-size: clamp(4rem, 8vw, 7rem);
   margin-bottom: 80px;
+  font-weight: 20;
+  margin-bottom: 60px;
 }
 
 .swiper {
@@ -709,20 +804,28 @@ body {
 
 /*WINTER SOLSTICE*/
 .solstice-hero {
-  height: 40vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   background: black;
   text-align: center;
+  padding: 200px 10%;
 }
 
 .solstice-title {
   font-family: 'Raflesia', serif;
   color: white;
   font-size: clamp(3rem, 8vw, 10rem);
-  letter-spacing: 2rem;
+  font-weight:20;
+  letter-spacing: 0.6rem;
   margin: 0 auto;
+}
+
+.solstice-hero img {
+  width: 90%;
+  height: auto;
+  display: block;
 }
 
 /*IRISH MEGALITHIC SITES*/
@@ -739,7 +842,8 @@ body {
   font-family: 'Raflesia', serif;
   color: white;
   font-size: clamp(3rem, 8vw, 10rem);
-  letter-spacing: 2rem;
+  font-weight:20;
+  letter-spacing: 0.6rem;
   margin: 0 auto;
 }
 
@@ -819,6 +923,7 @@ body {
   font-family: 'Raflesia', serif;
   color: white;
   font-size: clamp(8rem, 10vw, 8rem);
+  font-weight: 20;
   text-align: center;
   letter-spacing: 0.5rem;
   margin-bottom: 60px;
@@ -888,13 +993,13 @@ body {
 
 /*SUPPORT PAGE*/
 .support-title{
-  font-family: 'Raflesia', serif;
+    font-family: 'Raflesia', serif;
   color: white;
-  font-size: clamp(8rem, 10vw, 8rem);
-  text-align: center;
-  letter-spacing: 0.5rem;
-  margin-bottom: 60px;
-  margin-top: 200px;
+  font-size: clamp(3rem, 8vw, 10rem);
+  font-weight:20;
+  letter-spacing: 0.6rem;
+  margin: 0 auto;
+    text-align: center;
 }
 
 .learn-subtitle{
