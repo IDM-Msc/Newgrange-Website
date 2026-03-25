@@ -27,12 +27,12 @@ function draw() {
 
   // title
   fill(255);
-  textSize(20);
+  textSize(24);
   textAlign(CENTER);
   text("Irish megalithic sites", width / 2, 30);
 
   // instructions
-  textSize(16);
+  textSize(20);
   text("Click on the red dots to learn about megalithic sites in Ireland", width / 2, 60);
 
   // map
@@ -56,7 +56,7 @@ function draw() {
     let padding = 10;
     let maxWidth = 180;
 
-    textSize(12);
+    textSize(14);
     textAlign(LEFT, TOP);
 
     // estimate height (simple fallback)
