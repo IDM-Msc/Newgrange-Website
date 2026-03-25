@@ -1,28 +1,23 @@
 const swiper = new Swiper(".mySwiper", {
-  centeredSlides: true,
   loop: true,
-
-  slidesPerView: 2,  
-  spaceBetween: -1100,     
-
-  effect: "coverflow",
-  coverflowEffect: {
-    rotate: 0,
-    stretch: -100,    
-    depth: 400,
-    modifier: 2,
-    slideShadows: false,
-  },
-
+  centeredSlides: true,
+  slidesPerView: "auto",
+  slidesPerGroup: 1,
+  spaceBetween: 0,
+  speed: 750,
   grabCursor: true,
+  watchSlidesProgress: true,
+  slideToClickedSlide: false,
 
   pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+    el: ".custom-pagination",
+    clickable: true
   },
 
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".book-carousel .swiper-button-next",
+    prevEl: ".book-carousel .swiper-button-prev"
   }
 });
+document.querySelector(".swiper-button-next").onclick = () => swiper.slideNext();
+document.querySelector(".swiper-button-prev").onclick = () => swiper.slidePrev();

@@ -286,7 +286,7 @@ body {
   to { transform: translateX(-50%); }
 }
 
-/*HISTORY TIMELINE*/
+/*History timeline*/
 .history-hero {
   height: 40vh;
   display: flex;
@@ -295,7 +295,6 @@ body {
   background: black;
   text-align: center;
 }
-
 .history-title {
   font-family: 'Raflesia', serif;
   color: white;
@@ -307,11 +306,12 @@ body {
 /* TIMELINE CONTAINER */
 .timeline {
   position: relative;
-  max-width: 1200px;
-  margin: auto;
-  padding: 50px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
 }
 
+/*center line */
 .timeline::before {
   content: '';
   position: absolute;
@@ -319,196 +319,392 @@ body {
   top: 0;
   width: 4px;
   height: 100%;
-  background: white;
+  background: rgba(255, 255, 255, 0.2);
   transform: translateX(-50%);
   z-index: 0;
 }
 
-/* TIMELINE ITEMS */
-.timeline-item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 200px;
-  z-index: 2;
-}
-
-/* LINE */
-.timeline-item::after {
-  content: '';
+/*timeline progress line */
+.timeline-progress {
   position: absolute;
   left: 50%;
   top: 0;
-  height: calc(50% - 40px); 
-  width: 4px;
+  width: 5px;
+  height: 0;
   background: white;
   transform: translateX(-50%);
   z-index: 1;
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.95),
+    0 0 22px rgba(255,255,255,0.85),
+    0 0 40px rgba(255,255,255,0.55);
+  transition: none;
+}
+.timeline-progress::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow:
+    0 0 10px rgba(255,255,255,1),
+    0 0 24px rgba(255,255,255,0.95),
+    0 0 42px rgba(255,255,255,0.7),
+    0 0 65px rgba(255,255,255,0.45);
+}
+
+/*timeline rows*/
+.timeline-item,
+.timeline-item-last {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 430px 1fr;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 140px;
+  z-index: 2;
+}
+
+/*I removed the old flex */
+.timeline-item.left,
+.timeline-item.right {
+  gap: 0;
+}
+
+/*This is for the tect inbetween the lines so the text is more centered*/
+.timeline-content {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  background: black;
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-content h2 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  margin: 0 0 14px 0;
+  line-height: 1;
+  color: white;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #d9d9d9;
+  margin: 0 auto;
+  max-width: 320px;
 }
 
 .timeline-img-wrapper {
-  width: 350px;
+  width: 100%;
+  max-width: 340px;
   flex-shrink: 0;
 }
-
 .timeline-img {
   width: 100%;
+  display: block;
   border-radius: 20px;
   object-fit: cover;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-.timeline-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 400px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: white;
-  z-index: 2;
-  margin-top: 0;
-  background: black;
-  padding: 10px 15px;
+.timeline-item.left .timeline-img-wrapper {
+  grid-column: 1;
+  justify-self: end;
+  margin-right: 40px;
+}
+.timeline-item.right .timeline-img-wrapper {
+  grid-column: 3;
+  justify-self: start;
+  margin-left: 40px;
 }
 
-.timeline-content h2 {
-  font-size: 5rem;
-  margin-bottom: 10px;
-  margin-top: 10px;
+/*So for this i thought it would be interesting to have the lines be different sizes. The smaller lines are for discoveries and years closer together and the longer line are for important discoveries which happened further apart.*/
+.timeline-item.gap-xs {
+  margin-bottom: 55px;
+}
+.timeline-item.gap-small {
+  margin-bottom: 85px;
+}
+.timeline-item.gap-medium {
+  margin-bottom: 140px;
+}
+.timeline-item.gap-large {
+  margin-bottom: 210px;
+}
+.timeline-item.gap-xl {
+  margin-bottom: 280px;
 }
 
-.timeline-content p {
-  font-size: 1 rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-/* Alternate sides */
-.timeline-item.left {
-  flex-direction: row-reverse; 
-  gap: 50px;
-}
-
-.timeline-item.right {
-  flex-direction: row;         
-  gap: 50px;
-}
-
-.timeline-item.left .timeline-content {
-  text-align: right;
-  margin-right: 60px;
-}
-
-.timeline-item.right .timeline-content {
-  text-align: left;
-  margin-left: 60px;
-}
-/* FOR LAST TIMELINE ITEM */
+/*last item in the timeline*/
 .timeline-item-last {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  gap: 50px;
-  margin-bottom: 0; 
-  position: relative;
+  margin-bottom: 0;
 }
 .timeline-item-last .timeline-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 400px;
-  color: white;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  grid-column: 2;
 }
-/* Responsive */
+
+/* bruhhh mobile :( */
 @media (max-width: 900px) {
-  .timeline-item {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  .timeline {
+    padding: 60px 20px 20px;
   }
-  .timeline-item.left .timeline-content,
-  .timeline-item.right .timeline-content {
-    text-align: center;
-    margin: 0 auto;
+  .timeline::before {
+    left: 24px;
+    transform: none;
+  }
+  .timeline-progress {
+    left: 24px;
+    transform: none;
+  }
+  .timeline-progress::after {
+    left: 2px;
+    transform: none;
+  }
+  .timeline-item,
+  .timeline-item-last {
+    grid-template-columns: 1fr;
+    margin-bottom: 90px;
+    padding-left: 60px;
+  }
+  .timeline-content {
+    grid-column: 1;
+    text-align: left;
+    align-items: flex-start;
+    background: transparent;
+    max-width: 100%;
+    padding: 0;
+  }
+  .timeline-content h2 {
+    margin-bottom: 12px;
+  }
+  .timeline-content p {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .timeline-item.left .timeline-img-wrapper,
+  .timeline-item.right .timeline-img-wrapper {
+    grid-column: 1;
+    justify-self: start;
+    margin: 24px 0 0 0;
+    max-width: 280px;
   }
 }
 
-/*CAROUSEL STYLE*/
+/*CAROUSEL*/
 .book-carousel {
   background: #000;
   color: white;
-  padding: 100px 0;
+  padding: 120px 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .carousel-title {
   font-family: 'Raflesia', serif;
   font-size: clamp(4rem, 8vw, 7rem);
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
-/* Swiper container */
 .swiper {
   width: 100%;
-  height: 500px;
+  max-width: 1200px;
+  height: 720px;
+  margin: 0 auto;
   overflow: visible;
+  position: relative;
 }
+
+.swiper-wrapper {
+  align-items: center;
+}
+
 .swiper-slide {
+  width: 360px !important;
+  height: 520px !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s;
-  filter: blur(3px) brightness(0.7);
-  opacity: 0.5;
-  width: 260px;
+  opacity: 0.18;
+  transform: scale(0.88);
+  transition: transform 0.45s ease, opacity 0.45s ease;
+  pointer-events: none;
 }
+
 .swiper-slide-active {
-  filter: blur(0);
-  opacity: 1;
-  transform: scale(1.1);
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  z-index: 5;
+  pointer-events: auto;
 }
-.swiper-pagination {
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.38 !important;
+  transform: scale(0.92) !important;
+  z-index: 3;
+}
+
+.swiper-slide-prev {
+  margin-right: -120px;
+}
+
+.swiper-slide-next {
+  margin-left: -120px;
+}
+
+.swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next) {
+  opacity: 0.1;
+  transform: scale(0.84);
+  z-index: 1;
+}
+
+/* BOOK CARD WRAPPER */
+.book-card {
   position: relative;
-  margin-top: 30px;
+  width: 360px;
+  height: 520px;
+  border-radius: 22px;
+  overflow: hidden;
 }
+
+/* BOOK IMAGE */
+.book-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 22px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.55);
+}
+
+/* OVERLAY PANEL */
+.book-overlay {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 16px;
+  border-radius: 18px;
+  text-align: left;
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* SHOW ONLY ON ACTIVE BOOK */
+.swiper-slide-active .book-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.book-overlay h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: white;
+  opacity: 0.9;
+}
+
+.book-overlay p {
+  font-size: 13px;
+  line-height: 1.45;
+  margin-bottom: 12px;
+  color: #dddddd;
+}
+
+.book-overlay .cardBtn {
+  display: block;
+  margin-left: auto;
+  background: #f3f3f3;
+  color: black;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  box-shadow: none;
+}
+
+/*swipe/button controls */
 .carousel-controls {
   position: absolute;
-  bottom: -40px;
   left: 50%;
+  bottom: 28px;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+  z-index: 30;
 }
 
-/* Override default arrow positioning */
-.swiper-button-next::after,
-.swiper-button-prev ::after{
-  display: none;
+.swiper-button-prev,
+.swiper-button-next {
+  position: static !important;
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 !important;
+  color: #7a7a7a !important;
 }
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 8px !important;
+  font-weight: 700;
+  color: #7a7a7a !important;
+  transform: scale(0.8);
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  display: none !important;
+}
+
+.swiper-button-prev,
 .swiper-button-next,
-.swiper-button-prev {
-  position: static;
-  transform: none;
-  color: white;
-  font-size: 1.5rem;
-  opacity: 0.8;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #7a7a7a !important;
 }
-.swiper-slide img {
-  width: 280px;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+
+/*dot, dot . . .dots*/
+.custom-pagination {
+  position: static !important;
+  width: auto !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.swiper-pagination-bullet {
-  background: #666;
+
+.custom-pagination .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  margin: 0 !important;
+  background: #6f6f6f;
   opacity: 1;
 }
 
-.swiper-pagination-bullet-active {
-  background: white;
+.custom-pagination .swiper-pagination-bullet-active {
+  background: #2FA8FF;
 }
 
 /*WINTER SOLSTICE*/
@@ -953,4 +1149,58 @@ small {
   #navFooter ul {
     grid-template-columns: 1fr;
   }
+}
+
+/* BOOK CARD WRAPPER */
+.book-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* OVERLAY PANEL */
+.book-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+
+  padding: 18px;
+  border-radius: 18px;
+
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.35s ease;
+}
+
+/* SHOW ONLY ON ACTIVE BOOK */
+.swiper-slide-active .book-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TEXT */
+.book-overlay h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+
+.book-overlay p {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  color: #ddd;
+}
+
+/* BUTTON ALIGNMENT */
+.book-overlay .cardBtn {
+  margin-left: auto;
+  display: block;
 }
