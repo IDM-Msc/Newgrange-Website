@@ -16,7 +16,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(800, 600);
 
   datasites = table.getRowCount();
   loadTableSites();
@@ -54,13 +54,13 @@ function draw() {
       desc[selectedPoint];
 
     let padding = 10;
-    let maxWidth = 180;
+    let maxWidth = 300;
 
-    textSize(16);
+    textSize(15);
     textAlign(LEFT, TOP);
 
     // estimate height (simple fallback)
-    let th = 80;
+    let th = 100;
 
     let tx = px + 10;
     let ty = py - 40;
