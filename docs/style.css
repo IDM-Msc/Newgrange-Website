@@ -873,6 +873,12 @@ body {
   line-height: 1.6; /* Improve readability */
 }
 
+/* centering the globe */
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
 /* styles for Knowth and Dowth */
 .siteContainer {
   display: grid;
