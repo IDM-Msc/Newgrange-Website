@@ -54,7 +54,7 @@ function draw() {
       desc[selectedPoint];
 
     let padding = 10;
-    let maxWidth = 300;
+    let maxWidth = 320;
 
     textSize(15);
     textAlign(LEFT, TOP);
