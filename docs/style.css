@@ -114,6 +114,22 @@ body {
   margin: 0 auto;   
 }
 
+.video-year {
+  position: absolute;
+  top: 60rem;
+  left: 3rem;
+  width: 100%;
+  z-index: 2;
+  scale: 90%;
+}
+
+.video-year img{
+  width: 100%;
+  height: auto;
+  display: block;
+  top: 1rem;
+}
+
 .explore {
   padding: 80px 10% 40px;
   background: #000;
@@ -703,7 +719,7 @@ body {
 .sitesImgTop, .sitesImgaside {
   width: 100%;
   height: auto;
-  border-radius: 2rem;
+  border-radius: 6rem;
   box-shadow: 2px 2px 8px var(--secondary-color, 0.1);
 }
 
@@ -833,7 +849,7 @@ body {
   overflow: hidden; /* keeps overlay clean */
   max-width: 550px;
   margin: 0 auto;
-  border-radius: 2rem;
+  border-radius: 6rem;
 }
 
 .cardContainer figure {
@@ -906,7 +922,7 @@ body {
 /* Image on the right */
 .row .column:nth-child(5) figure {
   order: 2;
-  width: 50%;
+  width: 80%;
 }
 
 .row .column:nth-child(5) .cardImg {
