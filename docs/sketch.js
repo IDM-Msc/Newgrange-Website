@@ -28,11 +28,11 @@ function draw() {
   // title
   fill(255);
   textFont('Plus Jakarta Sans');
-  textSize(20);
+  textSize(24);
   textAlign(CENTER);
 
   // instructions
-  textSize(16);
+  textSize(20);
   text("Click on the dots to learn about megalithic sites in Ireland", width / 2, 60);
 
   // map
@@ -56,7 +56,7 @@ function draw() {
     let padding = 10;
     let maxWidth = 180;
 
-    textSize(12);
+    textSize(16);
     textAlign(LEFT, TOP);
 
     // estimate height (simple fallback)
