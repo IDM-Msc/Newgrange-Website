@@ -26,4 +26,3 @@ const swiper = new Swiper(".mySwiper", {
     prevEl: ".book-carousel .swiper-button-prev"
   }
 });
-
