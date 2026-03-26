@@ -771,16 +771,16 @@ body {
 .swiper-button-prev,
 .swiper-button-next {
   position: static !important;
-  width: 30px !important;
-  height: 30px !important;
+  width: 20px !important;
+  height: 20px !important;
   margin: 0 !important;
   color: #7a7a7a !important;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 22px !important;
-  font-weight: 900;
+  font-size: 20px !important;
+  font-weight: 800;
   color: #7a7a7a !important;
   transform: scale(0.8);
 }
