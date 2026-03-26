@@ -771,8 +771,8 @@ body {
 .swiper-button-prev,
 .swiper-button-next {
   position: static !important;
-  width: 40 !important;
-  height: 40 !important;
+  width: 30px !important;
+  height: 30px !important;
   margin: 0 !important;
   color: #7a7a7a !important;
 }
@@ -816,8 +816,6 @@ body {
 
 .custom-pagination .swiper-pagination-bullet-active {
   background: #2FA8FF;
-  width: auto !important;
-  display: flex;
 }
 
 /*WINTER SOLSTICE*/
