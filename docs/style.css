@@ -771,16 +771,16 @@ body {
 .swiper-button-prev,
 .swiper-button-next {
   position: static !important;
-  width: 14px !important;
-  height: 14px !important;
+  width: 40 !important;
+  height: 40 !important;
   margin: 0 !important;
   color: #7a7a7a !important;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 8px !important;
-  font-weight: 700;
+  font-size: 22px !important;
+  font-weight: 900;
   color: #7a7a7a !important;
   transform: scale(0.8);
 }
@@ -807,8 +807,8 @@ body {
 }
 
 .custom-pagination .swiper-pagination-bullet {
-  width: 7px;
-  height: 7px;
+  width: 12px;
+  height: 12px;
   margin: 0 !important;
   background: #6f6f6f;
   opacity: 1;
@@ -816,6 +816,8 @@ body {
 
 .custom-pagination .swiper-pagination-bullet-active {
   background: #2FA8FF;
+  width: auto !important;
+  display: flex;
 }
 
 /*WINTER SOLSTICE*/
