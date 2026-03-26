@@ -34,7 +34,7 @@ body {
 /* HERO SECTION */
 .hero {
   height: 100vh;
-  background-image: url('homeimg.png'); 
+  background-image: url('./img/homeimg.png'); 
   background-size: cover;
   background-position: center;
   /*Parallax effect*/
