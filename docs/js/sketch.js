@@ -11,8 +11,8 @@ let datasites;
 let selectedPoint = -1;
 
 function preload() {
-  mapImg = loadImage("globe.png");
-  table = loadTable("megalithic_data.csv", "csv", "header");
+  mapImg = loadImage("./img/globe.png");
+  table = loadTable("./js/megalithic_data.csv", "csv", "header");
 }
 
 function setup() {
