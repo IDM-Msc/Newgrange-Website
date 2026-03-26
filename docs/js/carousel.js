@@ -2,12 +2,19 @@ const swiper = new Swiper(".mySwiper", {
   loop: true,
   centeredSlides: true,
   slidesPerView: "auto",
-  slidesPerGroup: 1,
-  spaceBetween: 0,
-  speed: 750,
+  spaceBetween: -120,
+  speed: 800,
   grabCursor: true,
   watchSlidesProgress: true,
-  slideToClickedSlide: false,
+
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 8,
+    stretch: 0,
+    depth: 250,
+    modifier: 1.2,
+    slideShadows: false
+  },
 
   pagination: {
     el: ".custom-pagination",
@@ -19,5 +26,4 @@ const swiper = new Swiper(".mySwiper", {
     prevEl: ".book-carousel .swiper-button-prev"
   }
 });
-document.querySelector(".swiper-button-next").onclick = () => swiper.slideNext();
-document.querySelector(".swiper-button-prev").onclick = () => swiper.slidePrev();
+
