@@ -1012,6 +1012,14 @@ The smaller lines are for discoveries and years closer together and the longer l
   box-shadow: none;
   line-height: 1.6; 
 }
+.pageContainer canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+.megalithic-hero {
+  padding-bottom: 1rem;
+}
 
 /* centering the globe */
 canvas {
