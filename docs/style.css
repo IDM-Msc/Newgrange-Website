@@ -219,27 +219,28 @@ body {
 
 .video-text {
   text-align: center;
-  background: #000;  
-  margin: 20px 10% 60px;
-  padding: 0%;
+  background: #000;
+  margin: 20px auto 60px;
+  padding: 0 1.5rem;
+  max-width: 900px;
 }
 
 .video-text .subtitle {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #ffff;
-  font-size: 2rem;  
+  color: #fff;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
   font-weight: 600;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .video-text .description {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #ccc;  
-  max-width: 700px;
-  margin: 0 auto;   
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #d2d2d2;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .video-year {
@@ -396,10 +397,11 @@ body {
 }
 
 .section p {
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  line-height: 1.6;
-  color: #ccc;
+  line-height: 1.85;
+  color: #d0d0d0;
+  max-width: 560px;
 }
 
 .section.reverse {
@@ -935,16 +937,6 @@ The smaller lines are for discoveries and years closer together and the longer l
 }
 
 /*WINTER SOLSTICE*/
-.solstice-hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background: black;
-  text-align: center;
-  padding: 200px 10%;
-}
-
 .solstice-title {
   font-family: 'Raflesia', serif;
   color: white;
@@ -954,29 +946,61 @@ The smaller lines are for discoveries and years closer together and the longer l
   margin: 0 auto;
 }
 
+.solstice-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: black;
+  text-align: center;
+  padding: 200px 10% 120px;
+}
+
 .solstice-hero img {
   width: 90%;
+  max-width: 1100px;
   height: auto;
   display: block;
+  margin-bottom: 2.5rem;
+}
+
+.solstice-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #d4d4d4;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  max-width: 880px;
+  margin: 0 auto 1.25rem;
 }
 
 /*IRISH MEGALITHIC SITES*/
 .megalithic-hero {
-  height: 40vh;
+  min-height: 40vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: black;
   text-align: center;
+  padding: 120px 10% 60px;
 }
 
 .megalithic-title {
   font-family: 'Raflesia', serif;
   color: white;
   font-size: clamp(3rem, 8vw, 10rem);
-  font-weight:20;
+  font-weight: 20;
   letter-spacing: 0.6rem;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
+}
+
+.megalithic-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #d4d4d4;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  max-width: 860px;
+  margin: 0 auto 1rem;
 }
 
 .pageContainer {
@@ -1017,18 +1041,21 @@ canvas {
   grid-column: 1;
 }
 
-.sitesContent h3{
+.sitesContent h3 {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #ffff;
-  font-size: 28px;
-  margin-bottom: 1rem;
+  color: #fff;
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  margin-bottom: 0.85rem;
+  margin-top: 0.5rem;
 }
 
-.sitesContent p{
+.sitesContent p {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #ffff;
-  font-size: 18px;
-  margin-bottom: 3rem;
+  color: #d3d3d3;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 2.2rem;
+  max-width: 700px;
 }
 
 .figureImgside {
