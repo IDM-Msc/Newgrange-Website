@@ -17,38 +17,46 @@ body {
 
 .top-decoration {
   position: absolute;
-  top: -70rem;
-  left: 0;
-  width: 100%;
+  top: -600px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(1000px, 110vw, 1500px);
   z-index: 2;
   pointer-events: none;
-  scale: 70%;
 }
 
 .top-decoration img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
+  scale: 60%;
 }
 
 /* HERO SECTION */
 .hero {
   height: 100vh;
-  background-image: url('./img/homeimg.png'); 
+  background-image: url('./img/homeimg.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlay {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.overlay {
-  width: 100%;
-  height: 100%;
+.hero-content {
+  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -243,15 +251,23 @@ body {
 /* CONTENT SECTION */
 .video {
   width: 100%;
-  background: #000; 
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.video img {
+.video-wrap {
+  position: relative;
   width: 55%;
+}
+
+.video video {
+  width: 100%;
   height: auto;
+  display: block;
+  border-radius: 1000px;
+  object-fit: cover;
 }
 
 .video-text {
@@ -282,18 +298,17 @@ body {
 
 .video-year {
   position: absolute;
-  top: 60rem;
-  left: 3rem;
-  width: 100%;
-  z-index: 2;
-  scale: 90%;
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: clamp(180px, 90vw, 10000px);
+  pointer-events: none;
 }
 
-.video-year img{
+.video-year img {
   width: 100%;
   height: auto;
   display: block;
-  top: 1rem;
 }
 
 .explore {
@@ -1525,4 +1540,49 @@ small {
 .book-overlay .cardBtn {
   margin-left: auto;
   display: block;
+}
+
+/* solstice */
+.solstice-illustration {
+  position: relative;
+  width: min(1200px, 92vw);
+  margin: 0 auto 2.5rem;
+}
+
+.solstice-base {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.solstice-beam {
+  position: absolute;
+  top: 62%;
+  right: 0%;
+  width: 10%;
+  height: 15%;
+  background: linear-gradient(to left,
+    rgba(255, 223, 120, 0.95) 0%,
+    rgba(255, 223, 120, 0.55) 45%,
+    rgba(255, 223, 120, 0.12) 100%);
+  clip-path: polygon(100% 0, 100% 100%, 0 62%, 0 38%);
+  filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.solstice-glow {
+  position: absolute;
+  top: 69%;
+  left: 28%;
+  width: 12%;
+  height: 12%;
+  background: radial-gradient(circle,
+    rgba(255, 223, 120, 0.9) 0%,
+    rgba(255, 223, 120, 0.35) 40%,
+    rgba(255, 223, 120, 0) 75%);
+  filter: blur(10px);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+  pointer-events: none;
 }

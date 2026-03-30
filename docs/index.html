@@ -17,13 +17,21 @@
   <img src="./img/top-decoration.svg">
 </div>
   <div class="overlay">
-    <div class="track">
-      <div class="hero-track" id="hero-track">
-        <span data-i18n data-en="BRÚ NA BÓINNE" data-ga="BRÚ NA BÓINNE">BRÚ NA BÓINNE</span>
-        <img src="./img/staricon.png" class="divider">
-        <span data-i18n data-en="NEWGRANGE" data-ga="SÍ AN BHRÚ">NEWGRANGE</span>
-        <img src="./img/staricon.png" class="divider">
+    <div class="hero-content">
+      <div class="top-decoration">
+        <img src="./img/top-decoration1.svg" alt="">
       </div>
+
+      <div class="track">
+        <div class="hero-track" id="hero-track">
+          <span data-i18n data-en="BRÚ NA BÓINNE" data-ga="BRÚ NA BÓINNE" data-i18n data-en="BRÚ NA BÓINNE" data-ga="BRÚ NA BÓINNE">BRÚ NA BÓINNE</span>
+          <img src="./img/staricon.png" class="divider">
+          <span data-i18n data-en="NEWGRANGE" data-ga="SÍ AN BHRÚ" data-i18n data-en="NEWGRANGE" data-ga="SÍ AN BHRÚ">NEWGRANGE</span>
+          <img src="./img/staricon.png" class="divider">
+        </div>
+      </div>
+
+      <a href="https://brunaboinne.admit-one.eu/" class="hero-button" aria-label="Book a tour" data-i18n data-en="Book" data-ga="Cuir in Áirithe">Book</a>
     </div>
     <a href="https://brunaboinne.admit-one.eu/" class="hero-button" aria-label="Book a tour" data-i18n data-en="Book" data-ga="Cuir in Áirithe"> Book </a>
   </div>
@@ -55,18 +63,48 @@
   </div>
 
   <div class="menu-overlay" id="menuOverlay"></div>
+<!--BURGER MENU-->
+  <div class = "menu-btn" id="menuBtn">
+    <div class="burger-lines">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <span class="menu-text" data-i18n data-en="MENU" data-ga="ROGHCHLÁR"> MENU </span>
+  </div>
 
-  <section class="video">
-    <img src="./img/video.png" alt="Video of Newgrange">
-  </section>
+  <div class="lang-toggle" id="langToggle" aria-label="Toggle language">
+    <button type="button" class="lang-btn active" data-lang="en">EN</button>
+    <button type="button" class="lang-btn" data-lang="ga">GA</button>
+  </div>
 
-  <section class="video-text">
+  <div class="menu-panel" id="menuPanel">
+    <a href="#" data-i18n data-en="Home" data-ga="Baile"> Home </a>
+    <a href="#history-section" data-i18n data-en="History" data-ga="Stair"> History </a>
+    <a href="#reading-section" data-i18n data-en="Additional Reading" data-ga="Tuilleadh Léitheoireachta"> Additional Reading </a>
+    <a href="#solstice-section" data-i18n data-en="Winter Solstice" data-ga="Grianstad an Gheimhridh"> Winter Solstice </a>
+    <a href="#sites-section" data-i18n data-en="Other sites" data-ga="Suíomhanna eile"> Other sites </a>
+    <a href="#visitor-section" data-i18n data-en="Visitor Centre" data-ga="Ionad Cuairteoirí"> Visitor Centre </a>
+    <a href="#contact-section" data-i18n data-en="Contact" data-ga="Teagmháil"> Contact </a>
+  </div>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+<section class="video">
+  <div class="video-wrap">
+  <video autoplay muted loop playsinline>
+    <source src="./img/newgrange-video.mp4" type="video/mp4">
+  </video>
+
       <div class="video-year">
       <img src="./img/5200BC.svg">
     </div>
+  </div>
+</section>
+
+<section class="video-text">
     <h3 class="subtitle" data-i18n data-en="Discover Newgrange" data-ga="Faigh amach faoi Shí an Bhrú"> Discover Newgrange</h3>
      <p class="description" data-i18n data-en="Newgrange is a Stone Age monument in the Boyne Valley and one of Ireland’s most important prehistoric sites. Built around 5,200 years ago, it predates both Stonehenge and the Great Pyramids of Giza." data-ga="Is séadchomhartha ón gClochaois é Sí an Bhrú i nGleann na Bóinne agus ceann de na suíomhanna réamhstairiúla is tábhachtaí in Éirinn. Tógadh é thart ar 5,200 bliain ó shin, agus tá sé níos sine ná Stonehenge agus Pirimidí Móra Ghíse araon.">Newgrange is a Stone Age monument in the Boyne Valley and one of Ireland’s most important prehistoric sites. Built around 5,200 years ago, it predates both Stonehenge and the Great Pyramids of Giza.</p>
-
 
   </section>
 
@@ -181,8 +219,8 @@
   </section>
 
 <!--history timeline-->
-<section id= "history-section" class="history-hero">
-  <h2 class="history-title" data-i18n data-en="HISTORY OF NEWGRANGE" data-ga="STAIR SHÍ AN BHRÚ">HISTORY OF NEWGRANGE</h2>
+<section id= "history-section" id= "history-section" class="history-hero">
+  <h2 class="history-title" data-i18n data-en="HISTORY OF NEWGRANGE" data-ga="STAIR SHÍ AN BHRÚ" data-i18n data-en="HISTORY OF NEWGRANGE" data-ga="STAIR SHÍ AN BHRÚ">HISTORY OF NEWGRANGE</h2>
 </section>
 
 <section class="timeline">
@@ -599,6 +637,8 @@
   </footer>
 <script src="./js/carousel.js"></script>
 <script src="./js/script.js"></script>
+<script src="./js/menu.js"></script>
+<script src="./js/solstice.js"></script>
 <script src="./js/menu.js"></script>
 </body>
 </html>
