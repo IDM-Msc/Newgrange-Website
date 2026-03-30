@@ -8,7 +8,7 @@ let cou = [];
 let desc = [];
 
 let datasites;
-let selectedPoint = -1;
+let selectedPoint = 0;
 
 function preload() {
   mapImg = loadImage("globe.png");
