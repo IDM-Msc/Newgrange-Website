@@ -379,23 +379,23 @@ body {
 }
 
 /* individual sizes */
-.history-img {
-  width: 25%;
+.explore-card.history {
+  width: 350px;
   height: 550px;
 }
 
-.visitor-img {
-  width: 25%;
+.explore-card.visitor {
+  width: 350px;
   height: 220px;
 }
 
-.solstice-img {
-  width: 25%;
+.explore-card.solstice {
+  width: 350px;
   height: 450px;
 }
 
-.sites-img {
-  width: 25%;
+.explore-card.sites {
+  width: 350px;
   height: 350px;
 }
 
@@ -540,7 +540,7 @@ body {
   background-color: #6BA6EA;
   border-radius: 50%; 
   flex-shrink: 0;      
-  margin-top: 6px;
+  margin-top: 0px;
 }
 
 .track {
@@ -1122,6 +1122,19 @@ canvas {
   grid-column: 2;
 }
 
+.figureImgTop {
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 6rem; 
+}
+
+.figureImgTop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .sitesImgTop, .sitesImgaside {
   width: 100%;
   height: auto;
@@ -1163,6 +1176,13 @@ canvas {
     box-shadow: 2px 2px 8px var(--secondary-color, 0.1);
   }
 
+  
+.figureImgTop {
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 6rem; 
+}
 .visitorh3 {
   /*margin: 0px 0px 5px 0px;*/
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -1258,7 +1278,7 @@ canvas {
   overflow: hidden; 
   max-width: 550px;
   margin: 0 auto;
-  border-radius: 6rem;
+  border-radius: 2rem;
 }
 
 .cardContainer figure {
@@ -1549,40 +1569,226 @@ small {
   margin: 0 auto 2.5rem;
 }
 
+/* IMAGE */
 .solstice-base {
-  display: block;
   width: 100%;
-  height: auto;
+  display: block;
 }
 
+/* BEAM */
 .solstice-beam {
   position: absolute;
-  top: 62%;
+  top: 61%;
   right: 0%;
-  width: 10%;
+  width: 70%;
   height: 15%;
+
   background: linear-gradient(to left,
-    rgba(255, 223, 120, 0.95) 0%,
-    rgba(255, 223, 120, 0.55) 45%,
-    rgba(255, 223, 120, 0.12) 100%);
-  clip-path: polygon(100% 0, 100% 100%, 0 62%, 0 38%);
+    rgba(255, 203, 32, 0.95),
+    rgba(255, 217, 91, 0.7),
+    rgba(255, 217, 90, 0));
+
+  clip-path: polygon(100% 0, 100% 100%, 0 62%, 0 20%);
   filter: blur(6px);
+
   opacity: 0;
-  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: right;
+
+  transition: transform 2s ease, opacity 1s ease;
 }
 
+/* GLOW */
 .solstice-glow {
   position: absolute;
-  top: 69%;
+  top: 67%;
   left: 28%;
-  width: 12%;
-  height: 12%;
+  width: 10%;
+  height: 10%;
+
   background: radial-gradient(circle,
-    rgba(255, 223, 120, 0.9) 0%,
-    rgba(255, 223, 120, 0.35) 40%,
-    rgba(255, 223, 120, 0) 75%);
-  filter: blur(10px);
+    rgba(255, 203, 32, 0.95),
+    rgba(255,223,120,0.3),
+    transparent);
+
+  filter: blur(12px);
+
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0.6);
-  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.5);
+
+  transition: all 1.5s ease 0.5s;
+}
+
+/* ACTIVE STATE */
+.solstice-illustration.active .solstice-beam {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.solstice-illustration.active .solstice-glow {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* BUTTON */
+.solstice-toggle {
+  position: relative;
+  width: 120px;
+  height: 60px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.solstice-track {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+}
+
+.solstice-knob {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #eaeaea;
+  transition: all 0.35s ease;
+}
+
+.solstice-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  filter: brightness(0) opacity(0.8);
+}
+
+.solstice-toggle.active .solstice-knob {
+  left: 66px;
+  background: rgba(255, 203, 32, 0.95);
+}
+
+.solstice-toggle-text {
+  text-align: center;
+  color: #ccc;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.solstice-info {
+  width: min(1200px, 90%);
+  margin: 4rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.solstice-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+}
+
+.solstice-card.image-card {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.solstice-card.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.solstice-card.text-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.solstice-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.solstice-copy h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+.solstice-copy p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #d6d6d6;
+  max-width: 420px;
+  text-align: left; 
+}
+
+.solstice-link-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: black;
+  font-size: 15px;
+  padding: 0.75rem 1.5rem;;
+  border: 0.5px var(--background-color) solid;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 85px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: white;
+}
+
+.solstice-link-btn:hover {
+  background:#2FA8FF ;
+  color: white;
+}
+
+.arrow-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .solstice-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .solstice-row.reverse {
+    direction: ltr;
+  }
+
+  .solstice-card.image-card img {
+    max-width: 100%;
+  }
 }

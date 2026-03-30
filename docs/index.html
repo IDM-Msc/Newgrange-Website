@@ -109,7 +109,7 @@
     <div class="explore-images">
 
        <div class="explore-card history">
-      <img src="./img/histimg.png" alt="History">
+      <img src="./img/historyimg - Copy.JPG" alt="History">
       <a href="#history-section"class="explore-button">
         <span data-i18n data-en="History" data-ga="Stair">History</span>
         <img src="./img/arrow.svg" class="arrow">
@@ -117,7 +117,7 @@
     </div>
 
     <div class="explore-card visitor">
-      <img src="./img/visitorimg.png" alt="Visitor Centre">
+      <img src="./img/visitorimg.jpg" alt="Visitor Centre">
       <a href="#visitor-section"class="explore-button">
         <span data-i18n data-en="Visitor Centre" data-ga="Ionad Cuairteoirí">Visitor Centre</span>
         <img src="./img/arrow.svg" class="arrow">
@@ -125,7 +125,7 @@
     </div>
 
     <div class="explore-card solstice">
-      <img src="./img/solsticeimg.png" alt="Solstice">
+      <img src="./img/solsticeimg.webp" alt="Solstice">
       <a href="#solstice-section" class="explore-button">
         <span data-i18n data-en="Solstice" data-ga="Grianstad">Solstice</span>
         <img src="./img/arrow.svg" class="arrow">
@@ -133,7 +133,7 @@
     </div>
 
     <div class="explore-card sites">
-      <img src="./img/otherimg.png" alt="Other Sites">
+      <img src="./img/otherimg.jpg" alt="Other Sites">
       <a href= "#sites-section" class="explore-button">
         <span data-i18n data-en="Other Sites" data-ga="Suíomhanna Eile">Other Sites</span>
         <img src="./img/arrow.svg" class="arrow">
@@ -418,12 +418,64 @@
 </section>
 
 <!--WINTER SOLSTICE PAGE-->
-  <section class="solstice-hero">
-  <h2 id="solstice-section" class="solstice-title" data-i18n data-en=" WINTER SOLSTICE" data-ga=" GRIANSTAD AN GHEIMHRIDH"> WINTER SOLSTICE</h2>
-  <img src="./img/solsticedrawing.png" alt="History">
+<section class="solstice-hero" id="solstice-section">
+  <h2 class="solstice-title">WINTER SOLSTICE</h2>
 
-  <p class="solstice-text" data-i18n data-en="Newgrange is best known for the illumination of its passage and chamber by the winter solstice sun. Above the entrance is an opening known as the roof-box, designed to allow sunlight to enter the monument on the shortest days of the year." data-ga="Tá cáil ar Shí an Bhrú mar gheall ar an gcaoi a soilsíonn grian an gheimhridh a phasáiste agus a sheomra. Os cionn an bhealaigh isteach tá oscailt ar a dtugtar an bosca dín, a dearadh chun solas na gréine a ligean isteach sa séadchomhartha ar na laethanta is giorra den bhliain.">Newgrange is best known for the illumination of its passage and chamber by the winter solstice sun. Above the entrance is an opening known as the roof-box, designed to allow sunlight to enter the monument on the shortest days of the year.</p>
-  <p class="solstice-text" data-i18n data-en="From December 19th to 23rd, at sunrise, a narrow beam of light passes through the roof-box and travels along the 19 metre passage, gradually filling the inner chamber with light. This event lasts for about 17 minutes and shows the remarkable precision of the monument’s design." data-ga="Ón 19ú go dtí an 23ú Nollaig, ag éirí na gréine, téann léas caol solais tríd an mbosca dín agus síos an pasáiste 19 méadar, ag líonadh an tseomra inmheánaigh de sholas de réir a chéile. Maireann an eachtra seo thart ar 17 nóiméad agus léiríonn sí cruinneas iontach dhearadh an tséadchomhartha.">From December 19th to 23rd, at sunrise, a narrow beam of light passes through the roof-box and travels along the 19 metre passage, gradually filling the inner chamber with light. This event lasts for about 17 minutes and shows the remarkable precision of the monument’s design.</p>
+  <div class="solstice-illustration" id="solsticeIllustration">
+    <img src="./img/solsticedrawing.png" class="solstice-base">
+
+    <div class="solstice-beam"></div>
+    <div class="solstice-glow"></div>
+  </div>
+
+  <div class="solstice-toggle-wrap">
+    <button type="button" class="solstice-toggle" id="solsticeToggle">
+      <span class="solstice-track"></span>
+      <span class="solstice-knob">
+        <img src="./img/sun-icon.svg" class="solstice-icon" alt="">
+      </span>
+    </button>
+  </div>
+
+  <p class="solstice-toggle-text">Reveal the winter solstice</p>
+
+  <section class="solstice-info">
+    <div class="solstice-row">
+      <div class="solstice-card image-card">
+        <img src="./img/solsticeimg2.webp" alt="Winter solstice sunrise at Newgrange">
+      </div>
+
+      <div class="solstice-card text-card">
+        <div class="bullet"></div>
+        <div class="solstice-copy">
+          <h3 data-i18n data-en="The Roof-Box" data-ga="An Bosca Dín">The Roof-Box</h3>
+          <p data-i18n data-en="Newgrange is best known for the illumination of its passage and chamber by the winter solstice sun. Above the entrance is an opening known as the roof-box, designed to allow sunlight to enter the monument on the shortest days of the year." data-ga="Tá cáil ar Shí an Bhrú mar gheall ar an gcaoi a soilsíonn grian an gheimhridh a phasáiste agus a sheomra. Os cionn an bhealaigh isteach tá oscailt ar a dtugtar an bosca dín, a dearadh chun solas na gréine a ligean isteach sa séadchomhartha ar na laethanta is giorra den bhliain.">
+            Newgrange is best known for the illumination of its passage and chamber by the winter solstice sun. Above the entrance is an opening known as the roof-box, designed to allow sunlight to enter the monument on the shortest days of the year.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="solstice-row reverse">
+      <div class="solstice-card text-card">
+        <div class="bullet"></div>
+        <div class="solstice-copy">
+          <h3 data-i18n data-en="A Precise Alignment" data-ga="Ailíniú Beacht">A Precise Alignment</h3>
+          <p data-i18n data-en="From December 19th to 23rd, at sunrise, a narrow beam of light passes through the roof-box and travels along the 19 metre passage, gradually filling the inner chamber with light. This event lasts for about 17 minutes and shows the remarkable precision of the monument’s design." data-ga="Ón 19ú go dtí an 23ú Nollaig, ag éirí na gréine, téann léas caol solais tríd an mbosca dín agus síos an pasáiste 19 méadar, ag líonadh an tseomra inmheánaigh de sholas de réir a chéile. Maireann an eachtra seo thart ar 17 nóiméad agus léiríonn sí cruinneas iontach dhearadh an tséadchomhartha.">
+            From December 19th to 23rd, at sunrise, a narrow beam of light passes through the roof-box and travels along the 19 metre passage, gradually filling the inner chamber with light. This event lasts for about 17 minutes and shows the remarkable precision of the monument’s design.
+          </p>
+
+          <a href="#" class="solstice-link-btn">
+            Enter Lottery
+          </a>
+        </div>
+      </div>
+
+      <div class="solstice-card image-card">
+        <img src="./img/solsticeimg1.webp" alt="Sunlight entering the passage at Newgrange">
+      </div>
+    </div>
+  </section>
 </section>
 
 <!--IRISH MEGALITHIC SITES-->
@@ -445,7 +497,7 @@
       <header class="sitesHeader">
         <h2 id="knowth-section" data-i18n data-en="KNOWTH" data-ga="CNÓBHA">KNOWTH</h2>
         <figure class="figureImgTop">
-          <img src="./img/knowth01.png" alt="alt text of the image of Knowth" class="sitesImgTop">
+          <img src="./img/knowth2.JPG" alt="alt text of the image of Knowth" class="sitesImgTop">
         </figure>
       </header>
        <section class="sitesContent">
@@ -455,7 +507,7 @@
         <p data-i18n data-en="The entire mound is encircled by 127 kerbstones, many of which are decorated with megalithic art. Over 200 decorated stones were found during excavations at Knowth, and the site contains a remarkable concentration of Neolithic art, including spirals, lozenges, concentric circles, and crescent shapes." data-ga="Tá 127 gcloch imeallacha timpeall an dumha ar fad, agus tá ealaín mheigiliteach ar go leor díobh. Fuarthas breis agus 200 cloch mhaisithe le linn tochailtí i gCnóbha, agus tá bailiúchán suntasach d'ealaín Nua-Chlochaoise ar an suíomh, lena n-áirítear bíseanna, diamantanna, ciorcail chomhlárnacha agus cruthanna corráin.">The entire mound is encircled by 127 kerbstones, many of which are decorated with megalithic art. Over 200 decorated stones were found during excavations at Knowth, and the site contains a remarkable concentration of Neolithic art, including spirals, lozenges, concentric circles, and crescent shapes.</p>
       </section>  
       <figure class="figureImgside">
-        <img src="./img/knowth02.png" alt="image of Kn" class="sitesImgaside">
+        <img src="./img/knowth4.jpg" alt="image of Kn" class="sitesImgaside">
       </figure>
     </article>
 
@@ -463,7 +515,7 @@
   <header class="sitesHeader">
     <h2 id="dowth-section" data-i18n data-en="DOWTH" data-ga="DUBHTHACH">DOWTH</h2>
     <figure class="figureImgTop">
-      <img src="./img/dowth01.png" class="sitesImgTop">
+      <img src="./img/dowth1.jpg" class="sitesImgTop">
     </figure>
   </header>
   <section class="sitesContent">
@@ -474,7 +526,7 @@
     <p data-i18n data-en="With the major mounds and smaller surrounding monuments, Dowth helps show that Brú na Bóinne was a connected sacred landscape, built and used over thousands of years." data-ga="Leis na dumhaí móra agus na séadchomharthaí níos lú máguaird, léiríonn Dubhthach gur tírdhreach naofa nasctha a bhí i mBrú na Bóinne, tógtha agus in úsáid thar na mílte bliain.">With the major mounds and smaller surrounding monuments, Dowth helps show that Brú na Bóinne was a connected sacred landscape, built and used over thousands of years.</p>
   </section>
   <figure class="figureImgside">
-    <img src="./img/dowth02.png" class="sitesImgaside">
+    <img src="./img/dowth2.jpg" class="sitesImgaside">
   </figure>
 </article>
 </main>
@@ -482,8 +534,8 @@
 <main class="pageContainer">
     <header>
       <h1 id ="visitor-section" class="visitor-title" data-i18n data-en="VISITOR CENTRE" data-ga="IONAD CUAIRTEOIRÍ">VISITOR CENTRE</h1>
-      <figure>
-        <img src="./img/visitorcentre.png" alt="image of the visitor centre" id="centreImg">
+      <figure class="figureImgTop">
+        <img src="./img/visitorcentre.jpg" class="sitesImgTop" alt="image of the visitor centre" id="centreImg">
       </figure>
     </header>
     <article>
@@ -515,10 +567,9 @@
       <div class="column">
         <div class="cardContainer">
           <figure>
-            <img src="./img/helpImg01.png" alt="image of link to educational resources" class="cardImg">
+            <img src="./img/helpimg1.JPG" alt="image of link to educational resources" class="cardImg">
           </figure>
           <div class="textContainer">
-            <h4 data-i18n data-en="Lorem Ipsum" data-ga="Lorem Ipsum">Lorem Ipsum</h4>
              <h4 data-i18n data-en="Education Packs" data-ga="Pacáistí Oideachais">Education Packs</h4>
             <p data-i18n data-en="Education Packs follow the school curricula and are an aid for teachers and students." data-ga="Leanann na Pacáistí Oideachais curaclaim na scoile agus is áis iad do mhúinteoirí agus do dhaltaí.">Education Packs follow the school curricula and are an aid for teachers and students.</p>
             <a href="https://heritageireland.ie/educational-downloads/bru-na-boinne-visitor-centre-newgrange-and-knowth/" class="cardBtn" data-i18n data-en="Visit" data-ga="Tabhair Cuairt">Visit</a>
@@ -529,7 +580,7 @@
       <div class="column">
         <div class="cardContainer">
           <figure>
-            <img src="./img/helpImg02.png" alt=" image of link to Newgrange images" class="cardImg">
+            <img src="./img/helpimg2.JPG" alt=" image of link to Newgrange images" class="cardImg">
           </figure>
           <div class="textContainer">
             <h4 data-i18n data-en="Newgrange Images" data-ga="Íomhánna Shí an Bhrú">Newgrange Images</h4>
@@ -542,7 +593,7 @@
       <div class="column">
         <div class="cardContainer">
           <figure>
-            <img src="./img/helpImg03.png" alt="image of link to Newgrange chamber images" class="cardImg">
+            <img src="./img/helpimg3.JPG" alt="image of link to Newgrange chamber images" class="cardImg">
           </figure>
           <div class="textContainer">
             <h4 data-i18n data-en="Inside the Chamber" data-ga="Taobh Istigh den Seomra">Inside the Chamber</h4>
@@ -555,7 +606,7 @@
       <div class="column">
         <div class="cardContainer">
           <figure>
-            <img src="./img/helpImg04.png" alt="image of link to archeological resources" class="cardImg">
+            <img src="./img/helpimg4.JPG" alt="image of link to archeological resources" class="cardImg">
           </figure>
           <div class="textContainer">
              <h4 data-i18n data-en="Irish Archaeologists" data-ga="Seandálaithe Éireannacha">Irish Archaeologists</h4>
