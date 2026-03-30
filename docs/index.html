@@ -19,13 +19,13 @@
   <div class="overlay">
     <div class="track">
       <div class="hero-track" id="hero-track">
-        <span>BRÚ NA BÓINNE</span>
+        <span data-i18n data-en="BRÚ NA BÓINNE" data-ga="BRÚ NA BÓINNE">BRÚ NA BÓINNE</span>
         <img src="./img/staricon.png" class="divider">
-        <span>NEWGRANGE</span>
+        <span data-i18n data-en="NEWGRANGE" data-ga="SÍ AN BHRÚ">NEWGRANGE</span>
         <img src="./img/staricon.png" class="divider">
       </div>
     </div>
-    <a href="https://brunaboinne.admit-one.eu/" class="hero-button" aria-label="Book a tour"> Book </a>
+    <a href="https://brunaboinne.admit-one.eu/" class="hero-button" aria-label="Book a tour" data-i18n data-en="Book" data-ga="Cuir in Áirithe"> Book </a>
   </div>
 </section>
 
@@ -36,17 +36,22 @@
       <span></span>
       <span></span>
     </div>
-    <span class="menu-text"> MENU </span>
+    <span class="menu-text" data-i18n data-en="MENU" data-ga="ROGHCHLÁR"> MENU </span>
+  </div>
+
+  <div class="lang-toggle" id="langToggle" aria-label="Toggle language">
+    <button type="button" class="lang-btn active" data-lang="en">EN</button>
+    <button type="button" class="lang-btn" data-lang="ga">GA</button>
   </div>
 
   <div class="menu-panel" id="menuPanel">
-    <a href="#"> Home </a>
-    <a href="#history-section"> History </a>
-    <a href="#reading-section"> Additional Reading </a>
-    <a href="#solstice-section"> Winter Solstice </a>
-    <a href="#sites-section"> Other sites </a>
-    <a href="#visitor-section"> Visitor Centre </a>
-    <a href="#contact-section"> Contact </a>
+    <a href="#" data-i18n data-en="Home" data-ga="Baile"> Home </a>
+    <a href="#history-section" data-i18n data-en="History" data-ga="Stair"> History </a>
+    <a href="#reading-section" data-i18n data-en="Additional Reading" data-ga="Tuilleadh Léitheoireachta"> Additional Reading </a>
+    <a href="#solstice-section" data-i18n data-en="Winter Solstice" data-ga="Grianstad an Gheimhridh"> Winter Solstice </a>
+    <a href="#sites-section" data-i18n data-en="Other sites" data-ga="Suíomhanna eile"> Other sites </a>
+    <a href="#visitor-section" data-i18n data-en="Visitor Centre" data-ga="Ionad Cuairteoirí"> Visitor Centre </a>
+    <a href="#contact-section" data-i18n data-en="Contact" data-ga="Teagmháil"> Contact </a>
   </div>
 
   <div class="menu-overlay" id="menuOverlay"></div>
@@ -59,23 +64,21 @@
       <div class="video-year">
       <img src="./img/5200BC.svg">
     </div>
-    <h3 class="subtitle"> LOREM IPSUM</h3>
-    <p class="description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    </p>
+    <h3 class="subtitle" data-i18n data-en="Discover Newgrange" data-ga="Faigh amach faoi Shí an Bhrú"> Discover Newgrange</h3>
+     <p class="description" data-i18n data-en="Newgrange is a Stone Age monument in the Boyne Valley and one of Ireland’s most important prehistoric sites. Built around 5,200 years ago, it predates both Stonehenge and the Great Pyramids of Giza." data-ga="Is séadchomhartha ón gClochaois é Sí an Bhrú i nGleann na Bóinne agus ceann de na suíomhanna réamhstairiúla is tábhachtaí in Éirinn. Tógadh é thart ar 5,200 bliain ó shin, agus tá sé níos sine ná Stonehenge agus Pirimidí Móra Ghíse araon.">Newgrange is a Stone Age monument in the Boyne Valley and one of Ireland’s most important prehistoric sites. Built around 5,200 years ago, it predates both Stonehenge and the Great Pyramids of Giza.</p>
+
 
   </section>
 
   <section class="explore">
-    <h2 id="#explore-section" class="explore-title">EXPLORE</h2>
+    <h2 id="#explore-section" class="explore-title" data-i18n data-en="EXPLORE" data-ga="TAISCÉAL">EXPLORE</h2>
 
     <div class="explore-images">
 
        <div class="explore-card history">
       <img src="./img/histimg.png" alt="History">
       <a href="#history-section"class="explore-button">
-        <span>History</span>
+        <span data-i18n data-en="History" data-ga="Stair">History</span>
         <img src="./img/arrow.svg" class="arrow">
       </a>
     </div>
@@ -83,7 +86,7 @@
     <div class="explore-card visitor">
       <img src="./img/visitorimg.png" alt="Visitor Centre">
       <a href="#visitor-section"class="explore-button">
-        <span>Visitor Centre</span>
+        <span data-i18n data-en="Visitor Centre" data-ga="Ionad Cuairteoirí">Visitor Centre</span>
         <img src="./img/arrow.svg" class="arrow">
       </a>
     </div>
@@ -91,7 +94,7 @@
     <div class="explore-card solstice">
       <img src="./img/solsticeimg.png" alt="Solstice">
       <a href="#solstice-section" class="explore-button">
-        <span>Solstice</span>
+        <span data-i18n data-en="Solstice" data-ga="Grianstad">Solstice</span>
         <img src="./img/arrow.svg" class="arrow">
       </a>
     </div>
@@ -99,7 +102,7 @@
     <div class="explore-card sites">
       <img src="./img/otherimg.png" alt="Other Sites">
       <a href= "#sites-section" class="explore-button">
-        <span>Other Sites</span>
+        <span data-i18n data-en="Other Sites" data-ga="Suíomhanna Eile">Other Sites</span>
         <img src="./img/arrow.svg" class="arrow">
       </a>
     </div>
@@ -114,13 +117,7 @@
       <div class="text">
         <div class="bullet-point">
           <span class="bullet"></span>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        </p>
+          <p data-i18n data-en="Built by Stone Age farmers, the great circular mound measures approximately 85 metres in diameter and 13 metres high. A stone-built passage, 19 metres in length, leads to an inner chamber with three recesses." data-ga="Thóg feirmeoirí na Clochaoise an dumha mór ciorclach seo, atá thart ar 85 méadar ar trastomhas agus 13 mhéadar ar airde. Téann pasáiste cloiche, 19 méadar ar fad, isteach go seomra inmheánach le trí chuas ann.">Built by Stone Age farmers, the great circular mound measures approximately 85 metres in diameter and 13 metres high. A stone-built passage, 19 metres in length, leads to an inner chamber with three recesses.</p>
         </div>
       </div>
     </div>
@@ -133,13 +130,7 @@
       <div class="text">
         <div class="bullet-point">
           <span class="bullet"></span>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        </p>
+           <p data-i18n data-en="The mound is encircled by 97 large kerbstones, some of which are decorated with prehistoric carvings known as megalithic art, the most striking being the entrance stone, known as Kerbstone 1." data-ga="Tá 97 gcloch imeallacha mhóra timpeall an dumha, agus tá cuid díobh maisithe le snoíodóireacht réamhstairiúil ar a dtugtar ealaín mheigiliteach. Is í an chloch is suntasaí díobh ná an chloch iontrála, ar a dtugtar Kerbstone 1.">The mound is encircled by 97 large kerbstones, some of which are decorated with prehistoric carvings known as megalithic art, the most striking being the entrance stone, known as Kerbstone 1.</p>
         </div>
       </div>
     </div>
@@ -152,12 +143,8 @@
       <div class="text">
         <div class="bullet-point">
           <span class="bullet"></span>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+           <p data-i18n data-en="The carved kerbstones around Newgrange show the skill and symbolism of Neolithic art. Spirals, curves, and geometric patterns appear across the monument, suggesting that decoration was an important part of its design as well as its meaning." data-ga="Léiríonn na clocha imeallacha snoite timpeall Shí an Bhrú scil agus siombalachas ealaín na Nua-Chlochaoise. Tá bíseanna, cuair agus patrúin gheoiméadracha le feiceáil ar fud an tséadchomhartha, rud a thugann le fios go raibh an mhaisiú mar chuid thábhachtach den dearadh chomh maith lena bhrí.">
+          The carved kerbstones around Newgrange show the skill and symbolism of Neolithic art. Spirals, curves, and geometric patterns appear across the monument, suggesting that decoration was an important part of its design as well as its meaning.
         </p>
         </div>
       </div>
@@ -171,12 +158,8 @@
       <div class="text">
         <div class="bullet-point">
           <span class="bullet"></span>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          <p data-i18n data-en="A ring of 97 kerbstones surrounds the base of the mound, acting as both a retaining wall and a symbolic boundary. Some of these stones are decorated with intricate carvings, showing that the outer edge of Newgrange was designed to be both structural and ceremonial." data-ga="Tá fáinne de 97 gcloch imeallacha timpeall bhun an dumha, ag feidhmiú mar bhalla coinneála agus mar theorainn shiombalach araon. Tá snoíodóireacht mhionsonraithe ar chuid de na clocha seo, rud a léiríonn gur ceapadh imeall seachtrach Shí an Bhrú le bheith struchtúrach agus searmanais araon.">
+          A ring of 97 kerbstones surrounds the base of the mound, acting as both a retaining wall and a symbolic boundary. Some of these stones are decorated with intricate carvings, showing that the outer edge of Newgrange was designed to be both structural and ceremonial.
         </p>
         </div>
       </div>
@@ -189,12 +172,8 @@
       <div class="text">
         <div class="bullet-point">
           <span class="bullet"></span>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+           <p data-i18n data-en="While archaeologists originally classified Newgrange as a passage tomb, it is now widely understood to be far more than a place of burial. It functioned as an ancient temple, with deep astrological, spiritual, religious, and ceremonial significance." data-ga="Cé gur rangaithe ag seandálaithe mar uaigh phasáiste a bhí i Sí an Bhrú ar dtús, tuigtear anois gur mó i bhfad é ná áit adhlactha. D'fheidhmigh sé mar theampall ársa le tábhacht réalteolaíoch, spioradálta, reiligiúnach agus searmanais.">
+          While archaeologists originally classified Newgrange as a passage tomb, it is now widely understood to be far more than a place of burial. It functioned as an ancient temple, with deep astrological, spiritual, religious, and ceremonial significance.
         </p>
         </div>
       </div>
@@ -203,7 +182,7 @@
 
 <!--history timeline-->
 <section id= "history-section" class="history-hero">
-  <h2 class="history-title">HISTORY OF NEWGRANGE</h2>
+  <h2 class="history-title" data-i18n data-en="HISTORY OF NEWGRANGE" data-ga="STAIR SHÍ AN BHRÚ">HISTORY OF NEWGRANGE</h2>
 </section>
 
 <section class="timeline">
@@ -217,14 +196,14 @@
     </div>
     <div class="timeline-content">
       <h2>3500-3000 BC</h2>
-      <p>(Middle Neolithic) The great passage tombs of Knowth, Newgrange and Dowth were built at Brú na Bóinne.</p>
+      <p data-i18n data-en="(Middle Neolithic) The great passage tombs of Knowth, Newgrange and Dowth were built at Brú na Bóinne." data-ga="(Lár na Nua-Chlochaoise) Tógadh uaigheanna móra pasáiste Chnóbha, Shí an Bhrú agus Dhubhthaigh i mBrú na Bóinne.">(Middle Neolithic) The great passage tombs of Knowth, Newgrange and Dowth were built at Brú na Bóinne.</p>
     </div>
   </div>
 
   <div class="timeline-item left gap-medium">
     <div class="timeline-content">
       <h2>2500-800 BC</h2>
-      <p>(Bronze Age) The Great Stone Circle at Newgrange may have been built early in this period. It is unlikely that the Late Neolithic ceremonial structures were entirely abandoned. However, from around 2000 BC to 100 BC there is little evidence for settlement, burial or ritual at the passage tombs.</p>
+      <p data-i18n data-en="(Bronze Age) The Great Stone Circle at Newgrange may have been built early in this period. It is unlikely that the Late Neolithic ceremonial structures were entirely abandoned. However, from around 2000 BC to 100 BC there is little evidence for settlement, burial or ritual at the passage tombs." data-ga="(An Chré-Umhaois) Seans gur tógadh an Ciorcal Mór Cloch ag Sí an Bhrú go luath sa tréimhse seo. Ní dócha gur tréigeadh struchtúir shearmanais dheireadh na Nua-Chlochaoise go hiomlán. Mar sin féin, ó thart ar 2000 RC go 100 RC is beag fianaise atá ann ar lonnaíocht, adhlacadh ná deasghnátha ag na huaigheanna pasáiste.">(Bronze Age) The Great Stone Circle at Newgrange may have been built early in this period. It is unlikely that the Late Neolithic ceremonial structures were entirely abandoned. However, from around 2000 BC to 100 BC there is little evidence for settlement, burial or ritual at the passage tombs.</p>
         <!-- ADD IMAGE: stone circle/landscape -->
 </div>
   </div>
@@ -232,7 +211,7 @@
   <div class="timeline-item right gap-small">
     <div class="timeline-content">
       <h2>800 BC-AD 400</h2>
-      <p>(Iron Age) Burials began again at Knowth around 100 BC. Devotional objects have been found both there and at Newgrange, indicating that both had become important ceremonial sites again.</p>
+      <p data-i18n data-en="(Iron Age) Burials began again at Knowth around 100 BC. Devotional objects have been found both there and at Newgrange, indicating that both had become important ceremonial sites again." data-ga="(An Iarannaois) Thosaigh adhlacthaí arís i gCnóbha timpeall 100 RC. Fuarthas nithe deabhóideacha ansin agus i Sí an Bhrú araon, rud a thugann le fios go raibh an dá áit ina suíomhanna searmanais tábhachtacha arís.">(Iron Age) Burials began again at Knowth around 100 BC. Devotional objects have been found both there and at Newgrange, indicating that both had become important ceremonial sites again.</p>
     <!--add image of devotional objects?-->
     </div>
   </div>
@@ -240,7 +219,7 @@
   <div class="timeline-item right gap-small">
     <div class="timeline-content">
       <h2>400-800</h2>
-      <p>The final phase of burials at Knowth began about 600, coinciding with the early years of Christianity in Ireland and the emergence of powerful regional rulers.</p>
+      <p data-i18n data-en="The final phase of burials at Knowth began about 600, coinciding with the early years of Christianity in Ireland and the emergence of powerful regional rulers." data-ga="Thosaigh an chéim dheireanach d'adhlacthaí i gCnóbha timpeall 600, ag teacht leis na blianta luatha den Chríostaíocht in Éirinn agus le teacht chun cinn rialtóirí cumhachtacha réigiúnacha.">The final phase of burials at Knowth began about 600, coinciding with the early years of Christianity in Ireland and the emergence of powerful regional rulers.</p>
     <!--add image?-->
     </div>
   </div>
@@ -251,7 +230,7 @@
     </div>
     <div class="timeline-content">
       <h2>1699</h2>
-      <p>Local workmen rediscovered the chamber of the Great Mound at Newgrange.</p>
+      <p data-i18n data-en="Local workmen rediscovered the chamber of the Great Mound at Newgrange." data-ga="D'aimsigh oibrithe áitiúla seomra an Dhumha Mhóir i Sí an Bhrú arís.">Local workmen rediscovered the chamber of the Great Mound at Newgrange.</p>
       <!--add image of overgrown newgrange-->
     </div>
   </div>
@@ -259,7 +238,7 @@
   <div class="timeline-item left gap-medium">
     <div class="timeline-content">
       <h2>1882</h2>
-      <p>Knowth, Newgrange and Dowth were listed for protection under the Ancient Monuments Protection Act.</p>
+      <p data-i18n data-en="Knowth, Newgrange and Dowth were listed for protection under the Ancient Monuments Protection Act." data-ga="Cuireadh Cnóbha, Sí an Bhrú agus Dubhthach faoi chosaint faoin Acht um Chosaint Séadchomharthaí Ársa.">Knowth, Newgrange and Dowth were listed for protection under the Ancient Monuments Protection Act.</p>
     </div>
   </div>
 
@@ -269,7 +248,7 @@
     </div>
     <div class="timeline-content">
       <h2>1900s</h2>
-      <p>Archaeological investigation of the passage tombs in Brú na Bóinne began, continuing until the present.</p>
+      <p data-i18n data-en="Archaeological investigation of the passage tombs in Brú na Bóinne began, continuing until the present." data-ga="Thosaigh imscrúdú seandálaíochta ar na huaigheanna pasáiste i mBrú na Bóinne, agus leanann sé go dtí an lá inniu.">Archaeological investigation of the passage tombs in Brú na Bóinne began, continuing until the present.</p>
       <!--old pic or tomb pic?-->
     </div>
   </div>
@@ -277,7 +256,7 @@
   <div class="timeline-item left gap-small">
     <div class="timeline-content">
       <h2>1961</h2>
-      <p>By 1961 Newgrange was in a dilapidated condition and, despite the rapidly increasing number of visitors, there was no right of public access. It was becoming clear to many that this, one of the greatest monuments in Western Europe, could not be left in its then condition, but urgently required restoration and conservation, at least in the entrance area.</p>
+      <p data-i18n data-en="By 1961 Newgrange was in a dilapidated condition and, despite the rapidly increasing number of visitors, there was no right of public access. It was becoming clear to many that this, one of the greatest monuments in Western Europe, could not be left in its then condition, but urgently required restoration and conservation, at least in the entrance area." data-ga="Faoi 1961 bhí meath mór tagtha ar Shí an Bhrú agus, in ainneoin líon na gcuairteoirí a bheith ag méadú go tapa, ní raibh aon cheart rochtana poiblí ann. Bhí sé ag éirí soiléir do go leor daoine nach bhféadfaí an séadchomhartha seo, ceann de na cinn is mó in Iarthar na hEorpa, a fhágáil mar a bhí sé, ach go raibh gá práinneach le hathchóiriú agus le caomhnú, ar a laghad sa limistéar iontrála.">By 1961 Newgrange was in a dilapidated condition and, despite the rapidly increasing number of visitors, there was no right of public access. It was becoming clear to many that this, one of the greatest monuments in Western Europe, could not be left in its then condition, but urgently required restoration and conservation, at least in the entrance area.</p>
         <!--add pic before restoration -->
     </div>
   </div>
@@ -287,7 +266,7 @@
     </div>
     <div class="timeline-content">
       <h2>1963</h2>
-      <p>At Newgrange, O’Kelly’s work revealed that the Great Mound was aligned to the winter solstice. In 1963 O’Kelly discovered a feature at the entrance to the passage that is unique to Newgrange. He called it the roof-box. Its purpose was to channel the rising sun down the passage on the winter solstice and thus to light up the chamber at the heart of the monument.</p>
+      <p data-i18n data-en="At Newgrange, O’Kelly’s work revealed that the Great Mound was aligned to the winter solstice. In 1963 O’Kelly discovered a feature at the entrance to the passage that is unique to Newgrange. He called it the roof-box. Its purpose was to channel the rising sun down the passage on the winter solstice and thus to light up the chamber at the heart of the monument." data-ga="I Sí an Bhrú léirigh obair Uí Cheallaigh go raibh an Dumha Mór ailínithe leis an ngrianstad geimhridh. Sa bhliain 1963 d'aimsigh O'Kelly gné ag bealach isteach an phasáiste atá uathúil do Shí an Bhrú. Thug sé an 'bosca dín' uirthi. Ba é an cuspóir a bhí aici ná solas na gréine ag éirí a threorú síos an pasáiste ag grianstad an gheimhridh agus an seomra i gcroílár an tséadchomhartha a lasadh dá bharr.">At Newgrange, O’Kelly’s work revealed that the Great Mound was aligned to the winter solstice. In 1963 O’Kelly discovered a feature at the entrance to the passage that is unique to Newgrange. He called it the roof-box. Its purpose was to channel the rising sun down the passage on the winter solstice and thus to light up the chamber at the heart of the monument.</p>
     </div>
   </div>
 
@@ -296,7 +275,7 @@
     </div>
     <div class="timeline-content">
       <h2>21 December 1967</h2>
-      <p>On the morning of the winter solstice in 1967, sunlight entered the roof-box and travelled down the passage, illuminating the inner chamber. This confirmed the precise astronomical alignment of Newgrange and demonstrated the advanced knowledge of its Neolithic builders.</p>
+      <p data-i18n data-en="On the morning of the winter solstice in 1967, sunlight entered the roof-box and travelled down the passage, illuminating the inner chamber. This confirmed the precise astronomical alignment of Newgrange and demonstrated the advanced knowledge of its Neolithic builders." data-ga="Ar maidin grianstad an gheimhridh i 1967, chuaigh solas na gréine isteach tríd an mbosca dín agus síos an pasáiste, ag soilsiú an tseomra inmheánaigh. Dheimhnigh sé seo ailíniú cruinn réalteolaíoch Shí an Bhrú agus léirigh sé ardleibhéal eolais a lucht tógála Nua-Chlochaoise.">On the morning of the winter solstice in 1967, sunlight entered the roof-box and travelled down the passage, illuminating the inner chamber. This confirmed the precise astronomical alignment of Newgrange and demonstrated the advanced knowledge of its Neolithic builders.</p>
         <!--ADD: glowing chamber light image OR interior passage-->
     </div>
   </div>
@@ -307,7 +286,7 @@
     </div>
     <div class="timeline-content">
       <h2>1993</h2>
-      <p>Brú na Bóinne was inscribed by UNESCO as a World Heritage Site.</p>
+      <p data-i18n data-en="Brú na Bóinne was inscribed by UNESCO as a World Heritage Site." data-ga="Chuir UNESCO Brú na Bóinne ar liosta na Suíomhanna Oidhreachta Domhanda.">Brú na Bóinne was inscribed by UNESCO as a World Heritage Site.</p>
     </div>
   </div>
 
@@ -315,7 +294,7 @@
   <div class="timeline-item-last">
     <div class="timeline-content">
       <h2>1997</h2>
-      <p>Brú na Bóinne visitor centre opened.</p>
+      <p data-i18n data-en="Brú na Bóinne visitor centre opened." data-ga="Osclaíodh ionad cuairteoirí Bhrú na Bóinne.">Brú na Bóinne visitor centre opened.</p>
           <!--ADD IMAGE: visitor centre-->
     </div>
   </div>
@@ -324,7 +303,7 @@
 
   <!--BOOKS CAROUSEL-->
 <section class="book-carousel">
-  <h2 id="reading-section" class="carousel-title">ADDITIONAL READING</h2>
+  <h2 id="reading-section" class="carousel-title" data-i18n data-en="ADDITIONAL READING" data-ga="TUILLEADH LÉITHEOIREACHTA">ADDITIONAL READING</h2>
 
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
@@ -333,10 +312,10 @@
         <div class="book-card">
           <img src="./img/book1.png" alt="Newgrange Archaeology, Art and Legend">
           <div class="book-overlay">
-            <h4>Description</h4>
-            <p>A definitive archaeological study of Newgrange, exploring its construction, symbolism, and solar alignment.</p>
+            <h4 data-i18n data-en="Description" data-ga="Cur Síos">Description</h4>
+            <p data-i18n data-en="A definitive archaeological study of Newgrange, exploring its construction, symbolism, and solar alignment." data-ga="Staidéar seandálaíochta údarásach ar Shí an Bhrú a scrúdaíonn a thógáil, a shiombalachas agus a ailíniú gréine.">A definitive archaeological study of Newgrange, exploring its construction, symbolism, and solar alignment.</p>
             <a href="https://www.amazon.co.uk/dp/0500273715/ref=nosim?tag=newgrange01-21" target="_blank">
-              <button class="cardBtn">Buy</button>
+              <button class="cardBtn" data-i18n data-en="Buy" data-ga="Ceannaigh">Buy</button>
             </a>
           </div>
         </div>
@@ -346,10 +325,10 @@
         <div class="book-card">
           <img src="./img/book2.png" alt="Newgrange by Geraldine Stout">
           <div class="book-overlay">
-            <h4>Description</h4>
-            <p>A concise and accessible guide to Newgrange, blending history, archaeology, and cultural significance.</p>
+            <h4 data-i18n data-en="Description" data-ga="Cur Síos">Description</h4>
+            <p data-i18n data-en="A concise and accessible guide to Newgrange, blending history, archaeology, and cultural significance." data-ga="Treoir ghearr, shothuigthe ar Shí an Bhrú a chuireann stair, seandálaíocht agus tábhacht chultúrtha le chéile.">A concise and accessible guide to Newgrange, blending history, archaeology, and cultural significance.</p>
             <a href="https://www.amazon.co.uk/dp/1859184316/ref=nosim?tag=newgrange01-21" target="_blank">
-              <button class="cardBtn">Buy</button>
+              <button class="cardBtn" data-i18n data-en="Buy" data-ga="Ceannaigh">Buy</button>
             </a>
           </div>
         </div>
@@ -359,10 +338,10 @@
         <div class="book-card">
           <img src="./img/book3.png" alt="Exploring passage tombs">
           <div class="book-overlay">
-            <h4>Description</h4>
-            <p>A visual exploration of Newgrange and its surrounding sites, highlighting their structure and landscape.</p>
+            <h4 data-i18n data-en="Description" data-ga="Cur Síos">Description</h4>
+            <p data-i18n data-en="A visual exploration of Newgrange and its surrounding sites, highlighting their structure and landscape." data-ga="Iniúchadh amhairc ar Shí an Bhrú agus na suíomhanna máguaird, ag cur béime ar a struchtúr agus a dtírdhreach.">A visual exploration of Newgrange and its surrounding sites, highlighting their structure and landscape.</p>
             <a href="https://www.amazon.co.uk/Exploring-Newgrange-Liam-Mac-Uistin/dp/0862789818/ref=sr_1_1?crid=3P7VPTSS44V3Y&dib=eyJ2IjoiMSJ9.GrFRkl5Y5VB3Wlug6yQjMZUotK8guqYChd4gp8ZOtas.KB2xbLON5zMVJKNb0uNmBNU5zoUMCrQSHagGtif1oEs&dib_tag=se&keywords=newgrange+exploring+the+majestic+passage&qid=1774410422&s=books&sprefix=newgrange+exploring+the+majestic+passag%2Cstripbooks%2C249&sr=1-1" target="_blank">
-              <button class="cardBtn">Buy</button>
+              <button class="cardBtn" data-i18n data-en="Buy" data-ga="Ceannaigh">Buy</button>
             </a>
           </div>
         </div>
@@ -372,10 +351,10 @@
         <div class="book-card">
           <img src="./img/book4.png" alt="Story of Newgrange">
           <div class="book-overlay">
-            <h4>Description</h4>
-            <p>A myth-filled retelling of Newgrange, exploring ancient stories, gods, and mysteries of the site.</p>
+            <h4 data-i18n data-en="Description" data-ga="Cur Síos">Description</h4>
+            <p data-i18n data-en="A myth-filled retelling of Newgrange, exploring ancient stories, gods, and mysteries of the site." data-ga="Athinsint lán le miotais ar Shí an Bhrú a fhiosraíonn seanscéalta, déithe agus rúin an tsuímh.">A myth-filled retelling of Newgrange, exploring ancient stories, gods, and mysteries of the site.</p>
             <a href="https://www.amazon.co.uk/Story-Newgrange-5-Nutshell/dp/1842235982" target="_blank">
-              <button class="cardBtn">Buy</button>
+              <button class="cardBtn" data-i18n data-en="Buy" data-ga="Ceannaigh">Buy</button>
             </a>
           </div>
         </div>
@@ -385,10 +364,10 @@
         <div class="book-card">
           <img src="./img/book5.png" alt="Mythical Ireland">
           <div class="book-overlay">
-            <h4>Description</h4>
-            <p>A deeper dive into Ireland’s ancient past, connecting Newgrange to mythology, astronomy, and culture.</p>
+            <h4 data-i18n data-en="Description" data-ga="Cur Síos">Description</h4>
+            <p data-i18n data-en="A deeper dive into Ireland’s ancient past, connecting Newgrange to mythology, astronomy, and culture." data-ga="Léargas níos doimhne ar stair ársa na hÉireann, ag nascadh Shí an Bhrú le miotaseolaíocht, réalteolaíocht agus cultúr.">A deeper dive into Ireland’s ancient past, connecting Newgrange to mythology, astronomy, and culture.</p>
             <a href="https://www.amazon.co.uk/Mythical-Ireland-Light-Ancient-Past/dp/1838359338/ref=sr_1_1?crid=2TEITAZBIJPUD&dib=eyJ2IjoiMSJ9.3lovrn4-9zXyYLtPRWoTGRoPop1O2TQyctWZobjJPTZ0fHsnEj4i0e8JQBMSlqlM7M1J6zeR19DdkRe6sw6N--3xsJMtH5V3YaZWhmYC33E7CxQ34rbNj6n8J6hcM-EeE8_ldhu8SaW1g8-Lgc2T6M8g1zTch0CD8WqfyAPIyX1BnyLepLnB1HlEeAHTO9_9YzY_xWb0aeTx-N1nc8DaRU3DBA0GykgZqOAw3fa89gQ.8H4GN6nXusyX2U9cX9WH7TNgL4VJZcwC5aGOsxtD5gI&dib_tag=se&keywords=mythical+ireland&qid=1774410194&s=books&sprefix=mythical+irelan%2Cstripbooks%2C250&sr=1-1" target="_blank">
-              <button class="cardBtn">Buy</button>
+              <button class="cardBtn" data-i18n data-en="Buy" data-ga="Ceannaigh">Buy</button>
             </a>
           </div>
         </div>
@@ -407,13 +386,19 @@
 
 <!--WINTER SOLSTICE PAGE-->
   <section class="solstice-hero">
-    <h2 id="solstice-section" class="solstice-title"> WINTER SOLSTICE</h2>
-          <img src="./img/solsticedrawing.png" alt="History">
-  </section>
+  <h2 id="solstice-section" class="solstice-title" data-i18n data-en=" WINTER SOLSTICE" data-ga=" GRIANSTAD AN GHEIMHRIDH"> WINTER SOLSTICE</h2>
+  <img src="./img/solsticedrawing.png" alt="History">
+
+  <p class="solstice-text" data-i18n data-en="Newgrange is best known for the illumination of its passage and chamber by the winter solstice sun. Above the entrance is an opening known as the roof-box, designed to allow sunlight to enter the monument on the shortest days of the year." data-ga="Tá cáil ar Shí an Bhrú mar gheall ar an gcaoi a soilsíonn grian an gheimhridh a phasáiste agus a sheomra. Os cionn an bhealaigh isteach tá oscailt ar a dtugtar an bosca dín, a dearadh chun solas na gréine a ligean isteach sa séadchomhartha ar na laethanta is giorra den bhliain.">Newgrange is best known for the illumination of its passage and chamber by the winter solstice sun. Above the entrance is an opening known as the roof-box, designed to allow sunlight to enter the monument on the shortest days of the year.</p>
+  <p class="solstice-text" data-i18n data-en="From December 19th to 23rd, at sunrise, a narrow beam of light passes through the roof-box and travels along the 19 metre passage, gradually filling the inner chamber with light. This event lasts for about 17 minutes and shows the remarkable precision of the monument’s design." data-ga="Ón 19ú go dtí an 23ú Nollaig, ag éirí na gréine, téann léas caol solais tríd an mbosca dín agus síos an pasáiste 19 méadar, ag líonadh an tseomra inmheánaigh de sholas de réir a chéile. Maireann an eachtra seo thart ar 17 nóiméad agus léiríonn sí cruinneas iontach dhearadh an tséadchomhartha.">From December 19th to 23rd, at sunrise, a narrow beam of light passes through the roof-box and travels along the 19 metre passage, gradually filling the inner chamber with light. This event lasts for about 17 minutes and shows the remarkable precision of the monument’s design.</p>
+</section>
 
 <!--IRISH MEGALITHIC SITES-->
 <section class="megalithic-hero">
-  <h2 id="sites-section" class="megalithic-title"> IRISH MEGALITHIC SITES</h2>
+  <h2 id="sites-section" class="megalithic-title" data-i18n data-en=" IRISH MEGALITHIC SITES" data-ga=" SUÍOMHANNA MEIGILITEACHA NA hÉIREANN"> IRISH MEGALITHIC SITES</h2>
+  <p class="megalithic-description" data-i18n data-en="Beyond Newgrange itself, the Boyne Valley contains a wider ceremonial landscape known as Brú na Bóinne. Alongside Knowth and Dowth, Newgrange forms one of the most important groups of Neolithic monuments in Europe." data-ga="Taobh amuigh de Shí an Bhrú féin, tá tírdhreach searmanais níos leithne i nGleann na Bóinne ar a dtugtar Brú na Bóinne. In éineacht le Cnóbha agus Dubhthach, tá Sí an Bhrú ar cheann de na grúpaí séadchomharthaí Nua-Chlochaoise is tábhachtaí san Eoraip.">Beyond Newgrange itself, the Boyne Valley contains a wider ceremonial landscape known as Brú na Bóinne. Alongside Knowth and Dowth, Newgrange forms one of the most important groups of Neolithic monuments in Europe.
+  </p>
+  <p class="megalithic-description" data-i18n data-en="Together, these sites show that this was not a single isolated monument, but a connected sacred landscape shaped by organised farming communities over 5,000 years ago." data-ga="Léiríonn na suíomhanna seo le chéile nárbh é seo séadchomhartha aonair scoite amach, ach tírdhreach naofa nasctha a mhúnlaigh pobail fheirmeoireachta eagraithe breis is 5,000 bliain ó shin.">Together, these sites show that this was not a single isolated monument, but a connected sacred landscape shaped by organised farming communities over 5,000 years ago.</p>
 </section>
 
 <!--INTERACTIVE GLOBE-->
@@ -425,16 +410,16 @@
 <main class="pageContainer">
     <article class="siteContainer">
       <header class="sitesHeader">
-        <h2 id="knowth-section">KNOWTH</h2>
+        <h2 id="knowth-section" data-i18n data-en="KNOWTH" data-ga="CNÓBHA">KNOWTH</h2>
         <figure class="figureImgTop">
           <img src="./img/knowth01.png" alt="alt text of the image of Knowth" class="sitesImgTop">
         </figure>
       </header>
-      <section class="sitesContent">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. </p>
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. </p>
+       <section class="sitesContent">
+        <h3 data-i18n data-en="The Great Mound" data-ga="An Dumha Mór">The Great Mound</h3>
+        <p data-i18n data-en="The 5000 year old main mound at Knowth, known as Knowth Site 1, is contemporary with the mounds at Newgrange and Dowth. The site consists of a large mound and 18 smaller satellite mounds. The large mound contains two passages, placed along an east-west line, each leading to a burial chamber." data-ga="Tá an príomhdhumha 5,000 bliain d'aois i gCnóbha, ar a dtugtar Cnóbha Láithreán 1, comhaimseartha leis na dumhaí i Sí an Bhrú agus Dubhthach. Tá dumha mór amháin agus 18 ndumha bheaga thimpeall air ar an suíomh. Tá dhá phasáiste sa dumha mór, suite ar líne thoir-thiar, agus téann gach ceann díobh chuig seomra adhlactha.">The 5000 year old main mound at Knowth, known as Knowth Site 1, is contemporary with the mounds at Newgrange and Dowth. The site consists of a large mound and 18 smaller satellite mounds. The large mound contains two passages, placed along an east-west line, each leading to a burial chamber.</p>
+        <h3 data-i18n data-en="Megalithic Art" data-ga="Ealaín Mheigiliteach">Megalithic Art</h3>
+        <p data-i18n data-en="The entire mound is encircled by 127 kerbstones, many of which are decorated with megalithic art. Over 200 decorated stones were found during excavations at Knowth, and the site contains a remarkable concentration of Neolithic art, including spirals, lozenges, concentric circles, and crescent shapes." data-ga="Tá 127 gcloch imeallacha timpeall an dumha ar fad, agus tá ealaín mheigiliteach ar go leor díobh. Fuarthas breis agus 200 cloch mhaisithe le linn tochailtí i gCnóbha, agus tá bailiúchán suntasach d'ealaín Nua-Chlochaoise ar an suíomh, lena n-áirítear bíseanna, diamantanna, ciorcail chomhlárnacha agus cruthanna corráin.">The entire mound is encircled by 127 kerbstones, many of which are decorated with megalithic art. Over 200 decorated stones were found during excavations at Knowth, and the site contains a remarkable concentration of Neolithic art, including spirals, lozenges, concentric circles, and crescent shapes.</p>
       </section>  
       <figure class="figureImgside">
         <img src="./img/knowth02.png" alt="image of Kn" class="sitesImgaside">
@@ -442,58 +427,46 @@
     </article>
 
     <article class="siteContainer">
-      <header class="sitesHeader">
-        <h2 id="dowth-section">DOWTH</h2>
-        <figure class="figureImgTop">
-          <img src="./img/dowth01.png" alt="alt text of the image of Dowth" class="sitesImgTop">
-        </figure>
-      </header>
-      <section class="sitesContent">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. </p>
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. </p>
-      </section>  
-      <figure class="figureImgside">
-        <img src="./img/dowth02.png" alt="image of Dowth" class="sitesImgaside">
-      </figure>
-    </article>
+  <header class="sitesHeader">
+    <h2 id="dowth-section" data-i18n data-en="DOWTH" data-ga="DUBHTHACH">DOWTH</h2>
+    <figure class="figureImgTop">
+      <img src="./img/dowth01.png" class="sitesImgTop">
+    </figure>
+  </header>
+  <section class="sitesContent">
+    <h3 data-i18n data-en="A Ceremonial Monument" data-ga="Séadchomhartha Searmanais">A Ceremonial Monument</h3>
+    <p data-i18n data-en="Dowth is one of the three great passage tombs of Brú na Bóinne, together with Newgrange and Knowth. Together they form one of the most important prehistoric ceremonial landscapes in Europe." data-ga="Tá Dubhthach ar cheann de thrí uaigh mhóra phasáiste Bhrú na Bóinne, mar aon le Sí an Bhrú agus Cnóbha. Le chéile cruthaíonn siad ceann de na tírdhreacha searmanais réamhstairiúla is tábhachtaí san Eoraip.">Dowth is one of the three great passage tombs of Brú na Bóinne, together with Newgrange and Knowth. Together they form one of the most important prehistoric ceremonial landscapes in Europe.</p>
+
+    <h3 data-i18n data-en="Part of Brú na Bóinne" data-ga="Mar Chuid de Bhrú na Bóinne">Part of Brú na Bóinne</h3>
+    <p data-i18n data-en="With the major mounds and smaller surrounding monuments, Dowth helps show that Brú na Bóinne was a connected sacred landscape, built and used over thousands of years." data-ga="Leis na dumhaí móra agus na séadchomharthaí níos lú máguaird, léiríonn Dubhthach gur tírdhreach naofa nasctha a bhí i mBrú na Bóinne, tógtha agus in úsáid thar na mílte bliain.">With the major mounds and smaller surrounding monuments, Dowth helps show that Brú na Bóinne was a connected sacred landscape, built and used over thousands of years.</p>
+  </section>
+  <figure class="figureImgside">
+    <img src="./img/dowth02.png" class="sitesImgaside">
+  </figure>
+</article>
 </main>
 <!--VISITOR CENTRE-->
 <main class="pageContainer">
     <header>
-      <h1 id ="visitor-section" class="visitor-title">VISITOR CENTRE</h1>
+      <h1 id ="visitor-section" class="visitor-title" data-i18n data-en="VISITOR CENTRE" data-ga="IONAD CUAIRTEOIRÍ">VISITOR CENTRE</h1>
       <figure>
         <img src="./img/visitorcentre.png" alt="image of the visitor centre" id="centreImg">
       </figure>
     </header>
     <article>
         <section>
-        <h3 class="visitorh3">Lorem ipsum</h3>
-        <p class="visitorP">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-        </p>
-        </section>
+       <h3 class="visitorh3" data-i18n data-en="ACCESS" data-ga="ROCHTAIN">ACCESS</h3>
+      <p class="visitorP" data-i18n data-en=" Visitor access to Newgrange and Knowth is strictly by guided tour through the Brú na Bóinne Visitor Centre. There is no direct public access to the monuments themselves. Visits begin with a self guided exhibition before continuing by shuttle bus." data-ga=" Tá rochtain cuairteoirí ar Shí an Bhrú agus ar Chnóbha trí thuras treoraithe amháin ó Ionad Cuairteoirí Bhrú na Bóinne. Níl rochtain dhíreach phoiblí ar na séadchomharthaí féin. Tosaíonn an chuairt le taispeántas féin-threoraithe sula leanann sí ar aghaidh ar bhus tointeála."> Visitor access to Newgrange and Knowth is strictly by guided tour through the Brú na Bóinne Visitor Centre. There is no direct public access to the monuments themselves. Visits begin with a self guided exhibition before continuing by shuttle bus.</p>
 
-        <section>
-        <h3 class="visitorh3">DIRECTIONS</h3>
-        <p class="visitorP">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        </p>
-        <figure class="map-img">
-        <img src="./img/map.png" alt="image of the map to get to visitor centre" id="centreImg">
-        </figure>
-        </section>
+      <h3 class="visitorh3" data-i18n data-en="DIRECTIONS" data-ga="TREORACHA">DIRECTIONS</h3>
+      <p class="visitorP" data-i18n data-en="Access to the monuments is via the Brú na Bóinne Visitor Centre, Eircode A92 EH5C. When using GPS, enter the Visitor Centre as your destination." data-ga="Tá rochtain ar na séadchomharthaí trí Ionad Cuairteoirí Bhrú na Bóinne, Eircode A92 EH5C. Má tá GPS á úsáid agat, cuir an tIonad Cuairteoirí isteach mar do cheann scríbe.">Access to the monuments is via the Brú na Bóinne Visitor Centre, Eircode A92 EH5C. When using GPS, enter the Visitor Centre as your destination.</p>
 
-        <section>
-        <h3 class="visitorh3">TICKETING</h3>
-        <p class="visitorP">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-        </p>
+      <h3 class="visitorh3" data-i18n data-en="TICKETING" data-ga="TICÉADÚ">TICKETING</h3>
+      <p class="visitorP" data-i18n data-en="Pre booking is essential. Access is by guided tour only, with limited numbers on each departure. Tickets are released 30 days in advance during the main season and 7 days in advance during the winter season." data-ga="Tá réamháirithint riachtanach. Ní cheadaítear rochtain ach trí thuras treoraithe, agus tá líon teoranta daoine ar gach imeacht. Scaoiltear ticéid 30 lá roimh ré le linn an phríomhshéasúir agus 7 lá roimh ré le linn shéasúr an gheimhridh.">Pre booking is essential. Access is by guided tour only, with limited numbers on each departure. Tickets are released 30 days in advance during the main season and 7 days in advance during the winter season.</p>
         <div id="visitorBtnsDiv">
-          <a href="https://brunaboinne.admit-one.eu/" class="visitorBtn">Tickets</a>
-          <a href="https://boynevalleytours.com/contact/" class="visitorBtn">Make a tour inquiry</a>
-          <a href="https://boynevalleytours.com/private-tours/" class="visitorBtn">Book a private tour</a>
+          <a href="https://brunaboinne.admit-one.eu/" class="visitorBtn" data-i18n data-en="Tickets" data-ga="Ticéid">Tickets</a>
+          <a href="https://boynevalleytours.com/contact/" class="visitorBtn" data-i18n data-en="Make a tour inquiry" data-ga="Déan fiosrú faoi thuras">Make a tour inquiry</a>
+          <a href="https://boynevalleytours.com/private-tours/" class="visitorBtn" data-i18n data-en="Book a private tour" data-ga="Cuir turas príobháideach in áirithe">Book a private tour</a>
         </div>
         </section>
       </article>
@@ -501,8 +474,8 @@
 <!--SUPPORT PAGE-->
   <main class="pageContainer">
     <hgroup>
-      <h1 id="support-section" class="support-title">HOW CAN WE HELP?</h1>
-      <h3 class="learn-subtitle">LEARN MORE</h3>
+      <h1 id="support-section" class="support-title" data-i18n data-en="HOW CAN WE HELP?" data-ga="CONAS IS FÉIDIR LINN CABHRÚ?">HOW CAN WE HELP?</h1>
+      <h3 class="learn-subtitle" data-i18n data-en="LEARN MORE" data-ga="FAIGH TUILLEADH EOLAIS">LEARN MORE</h3>
     </hgroup>
 
     <section class="row">
@@ -512,9 +485,10 @@
             <img src="./img/helpImg01.png" alt="image of link to educational resources" class="cardImg">
           </figure>
           <div class="textContainer">
-            <h4>Lorem Ipsum</h4>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-            <a href="https://heritageireland.ie/educational-downloads/bru-na-boinne-visitor-centre-newgrange-and-knowth/" class="cardBtn">Visit</a>
+            <h4 data-i18n data-en="Lorem Ipsum" data-ga="Lorem Ipsum">Lorem Ipsum</h4>
+             <h4 data-i18n data-en="Education Packs" data-ga="Pacáistí Oideachais">Education Packs</h4>
+            <p data-i18n data-en="Education Packs follow the school curricula and are an aid for teachers and students." data-ga="Leanann na Pacáistí Oideachais curaclaim na scoile agus is áis iad do mhúinteoirí agus do dhaltaí.">Education Packs follow the school curricula and are an aid for teachers and students.</p>
+            <a href="https://heritageireland.ie/educational-downloads/bru-na-boinne-visitor-centre-newgrange-and-knowth/" class="cardBtn" data-i18n data-en="Visit" data-ga="Tabhair Cuairt">Visit</a>
           </div>
         </div>
       </div>
@@ -525,9 +499,9 @@
             <img src="./img/helpImg02.png" alt=" image of link to Newgrange images" class="cardImg">
           </figure>
           <div class="textContainer">
-            <h4>Lorem Ipsum</h4>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-            <a href="https://www.knowth.com/newgrange-images.htm" class="cardBtn">Visit</a>
+            <h4 data-i18n data-en="Newgrange Images" data-ga="Íomhánna Shí an Bhrú">Newgrange Images</h4>
+            <p data-i18n data-en="Newgrange Images, Aerial Photographs and additional Aerial Visuals." data-ga="Íomhánna de Shí an Bhrú, grianghraif ón aer agus tuilleadh amharc-íomhánna ón aer.">Newgrange Images, Aerial Photographs and additional Aerial Visuals.</p>
+            <a href="https://www.knowth.com/newgrange-images.htm" class="cardBtn" data-i18n data-en="Visit" data-ga="Tabhair Cuairt">Visit</a>
           </div>
         </div>
       </div>
@@ -538,9 +512,9 @@
             <img src="./img/helpImg03.png" alt="image of link to Newgrange chamber images" class="cardImg">
           </figure>
           <div class="textContainer">
-            <h4>Lorem Ipsum</h4>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-            <a href="https://www.knowth.com/newgrange-chamber.htm" class="cardBtn">Visit</a>
+            <h4 data-i18n data-en="Inside the Chamber" data-ga="Taobh Istigh den Seomra">Inside the Chamber</h4>
+            <p data-i18n data-en="Images from inside the Chamber and additional Photographs." data-ga="Íomhánna ón taobh istigh den seomra agus grianghraif bhreise.">Images from inside the Chamber and additional Photographs.</p>
+            <a href="https://www.knowth.com/newgrange-chamber.htm" class="cardBtn" data-i18n data-en="Visit" data-ga="Tabhair Cuairt">Visit</a>
           </div>
         </div>
       </div>
@@ -551,9 +525,9 @@
             <img src="./img/helpImg04.png" alt="image of link to archeological resources" class="cardImg">
           </figure>
           <div class="textContainer">
-            <h4>Lorem Ipsum</h4>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-            <a href="https://www.newgrange.com/irish-archaeologists.htm" class="cardBtn">Visit</a>
+             <h4 data-i18n data-en="Irish Archaeologists" data-ga="Seandálaithe Éireannacha">Irish Archaeologists</h4>
+            <p data-i18n data-en="Irish Archaeologists including Prof. Michael J. O'Kelly who excavated Newgrange." data-ga="Seandálaithe Éireannacha, lena n-áirítear an tOllamh Michael J. O'Kelly a thochail Sí an Bhrú.">Irish Archaeologists including Prof. Michael J. O'Kelly who excavated Newgrange.</p>
+            <a href="https://www.newgrange.com/irish-archaeologists.htm" class="cardBtn" data-i18n data-en="Visit" data-ga="Tabhair Cuairt">Visit</a>
           </div>
         </div>
       </div>
@@ -564,9 +538,9 @@
             <img src="./img/helpImg05.png" alt="image of link to old maps of Newgrange" class="cardImg">
           </figure>
           <div class="textContainer">
-            <h4>Lorem Ipsum</h4>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-            <a href="https://www.newgrange.com/old-maps.htm" class="cardBtn">Visit</a>
+             <h4 data-i18n data-en="Historic Maps" data-ga="Léarscáileanna Stairiúla">Historic Maps</h4>
+            <p data-i18n data-en="1837 Map showing Newgrange and Knowth." data-ga="Léarscáil 1837 a thaispeánann Sí an Bhrú agus Cnóbha.">1837 Map showing Newgrange and Knowth.</p>
+            <a href="https://www.newgrange.com/old-maps.htm" class="cardBtn" data-i18n data-en="Visit" data-ga="Tabhair Cuairt">Visit</a>
           </div>
         </div>
       </div>
@@ -575,19 +549,19 @@
 
   <!--CONTACT PAGE-->
   <main class="pageContainer">
-    <h1 id="contact-section" class="contact-title">CONTACT US</h1>
+    <h1 id="contact-section" class="contact-title" data-i18n data-en="CONTACT US" data-ga="DÉAN TEAGMHÁIL LINN">CONTACT US</h1>
     <section id="contactContainer">
       <div id="contactBox">
-        <address><b>Brú na Bóinne Visitor Centre (Newgrange and Knowth)</b><br>
-                  Staleen Road, Donore, Co. Meath<br>
+        <address><b data-i18n data-en="Brú na Bóinne Visitor Centre (Newgrange and Knowth)" data-ga="Ionad Cuairteoirí Bhrú na Bóinne (Sí an Bhrú agus Cnóbha)">Brú na Bóinne Visitor Centre (Newgrange and Knowth)</b><br>
+                  <span data-i18n data-en="Staleen Road, Donore, Co. Meath" data-ga="Bóthar Stailín, Dún Uabhair, Co. na Mí">Staleen Road, Donore, Co. Meath</span><br>
                   A92 EH5C, Ireland
         </address>
-        <p><b>E-Mail: </b><a href="mailto:newgrange@email.com">newgrange@email.com</a></p>
-        <p><b>Phone: </b>(+12)3456 7890</p>
-        <p><b>Booking: </b><a href="https://www.placeholderwebsite.com" target="_blank">https://www.placeholderwebsite.com</a></p>
+       <p><b data-i18n data-en="E-Mail: " data-ga="Ríomhphost: ">E-Mail: </b><a href="mailto:brunaboinne@opw.ie">brunaboinne@opw.ie</a></p>
+      <p><b data-i18n data-en="Phone: " data-ga="Fón: ">Phone: </b>+353 41 988 0300</p>
+      <p><b data-i18n data-en="Booking: " data-ga="Áirithint: ">Booking: </b><a href="https://brunaboinne.admit-one.eu/" target="_blank">https://brunaboinne.admit-one.eu/</a></p>
       </div>
       <figure id="contactImgBox">
-        <img src="./img/contact.png" alt="alt text for an contact image" id="contactImg"> 
+        <img src="./img/contact.png" alt="alt text for an contact image" id="contactImg">
       </figure>
     </section>
   </main>
@@ -597,31 +571,31 @@
     <div id="footerWrapper">
       <div id="footerAddressDiv">
         <address id="footerAddress">
-          Brú na Bóinne Visitor Centre (Newgrange and Knowth)<br>
-          Staleen Road, Donore, Co. Meath<br>
+          <span data-i18n data-en="Brú na Bóinne Visitor Centre (Newgrange and Knowth)" data-ga="Ionad Cuairteoirí Bhrú na Bóinne (Sí an Bhrú agus Cnóbha)">Brú na Bóinne Visitor Centre (Newgrange and Knowth)</span><br>
+          <span data-i18n data-en="Staleen Road, Donore, Co. Meath" data-ga="Bóthar Stailín, Dún Uabhair, Co. na Mí">Staleen Road, Donore, Co. Meath</span><br>
           A92 EH5C, Ireland<br>
-          Telephone: (+12)3456 7890 <br>
-          E-Mail: <a href="mailto:brunaboinne@opw.ie">brunaboinne@opw.ie</a>
+          <span data-i18n data-en="Phone: " data-ga="Fón: ">Phone: </span>+353 41 988 0300 <br>
+          <span data-i18n data-en="E-Mail: " data-ga="Ríomhphost: ">E-Mail: </span><a href="mailto:brunaboinne@opw.ie">brunaboinne@opw.ie</a>
         </address>
       </div>
 
       <nav id="navFooter">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#explore-section">Explore</a></li>
-          <li><a href="#history-section">History</a></li>
-          <li><a href="#reading-section">Additional Reading</a></li>
-          <li><a href="#solstice-section">Winter Solstice</a></li>
-          <li><a href="#sites-section">Irish Megalithic Sites</a></li>
-          <li><a href="#knowth-section">Knowth</a></li>
-          <li><a href="#dowth-section">Dowth</a></li>
-          <li><a href="#visitor-section">Visitor Centre</a></li>
-          <li><a href="#support-section">Support</a></li>
+          <li><a href="#" data-i18n data-en="Home" data-ga="Baile">Home</a></li>
+          <li><a href="#explore-section" data-i18n data-en="Explore" data-ga="Taiscéal">Explore</a></li>
+          <li><a href="#history-section" data-i18n data-en="History" data-ga="Stair">History</a></li>
+          <li><a href="#reading-section" data-i18n data-en="Additional Reading" data-ga="Tuilleadh Léitheoireachta">Additional Reading</a></li>
+          <li><a href="#solstice-section" data-i18n data-en="Winter Solstice" data-ga="Grianstad an Gheimhridh">Winter Solstice</a></li>
+          <li><a href="#sites-section" data-i18n data-en="Irish Megalithic Sites" data-ga="Suíomhanna Meigiliteacha na hÉireann">Irish Megalithic Sites</a></li>
+          <li><a href="#knowth-section" data-i18n data-en="Knowth" data-ga="Cnóbha">Knowth</a></li>
+          <li><a href="#dowth-section" data-i18n data-en="Dowth" data-ga="Dubhthach">Dowth</a></li>
+          <li><a href="#visitor-section" data-i18n data-en="Visitor Centre" data-ga="Ionad Cuairteoirí">Visitor Centre</a></li>
+          <li><a href="#support-section" data-i18n data-en="Support" data-ga="Tacaíocht">Support</a></li>
         </ul>
       </nav>
     </div>
 
-    <small>Copyright Newgrange 2026</small>
+    <small data-i18n data-en="Copyright Newgrange 2026" data-ga="Cóipcheart Newgrange 2026">Copyright Newgrange 2026</small>
   </footer>
 <script src="./js/carousel.js"></script>
 <script src="./js/script.js"></script>

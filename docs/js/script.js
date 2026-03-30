@@ -31,3 +31,36 @@ function updateTimelineProgress() {
 window.addEventListener('scroll', updateTimelineProgress);
 window.addEventListener('resize', updateTimelineProgress);
 window.addEventListener('load', updateTimelineProgress);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const langButtons = document.querySelectorAll(".lang-btn");
+  const translatable = document.querySelectorAll("[data-i18n]");
+
+  function setLanguage(lang) {
+    translatable.forEach((el) => {
+      const newText = el.getAttribute(`data-${lang}`);
+      if (newText) {
+        el.textContent = newText;
+      }
+    });
+
+    document.documentElement.lang = lang === "ga" ? "ga" : "en";
+    localStorage.setItem("siteLanguage", lang);
+
+    langButtons.forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    window.siteLanguage = lang;
+    window.dispatchEvent(new CustomEvent("languageChanged", { detail: { lang } }));
+  }
+
+  langButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setLanguage(btn.dataset.lang);
+    });
+  });
+
+  const savedLanguage = localStorage.getItem("siteLanguage") || "en";
+  setLanguage(savedLanguage);
+});

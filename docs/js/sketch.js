@@ -8,7 +8,7 @@ let cou = [];
 let desc = [];
 
 let datasites;
-let selectedPoint = -1;
+let selectedPoint = 0;
 
 function preload() {
   mapImg = loadImage("./img/globe.png");
@@ -48,15 +48,9 @@ function draw() {
     let px = x[selectedPoint];
     let py = y[selectedPoint];
 
-    let info =
-      n[selectedPoint] + "\n" +
-      cou[selectedPoint] + "\n" +
-      desc[selectedPoint];
-
     let padding = 10;
     let maxWidth = 320;
 
-    textSize(15);
     textAlign(LEFT, TOP);
 
     // estimate height (simple fallback)
@@ -72,11 +66,28 @@ function draw() {
     // box
     fill(0);
     stroke(255);
-    rect(tx, ty, maxWidth + 2 * padding, th + 2 * padding, 5);
+    rect(tx, ty, maxWidth + 2 * padding, th + 2 * padding, 22);
 
     // text (wrapped automatically)
+    noStroke();
+
+    // NAME (bold + slightly bigger)
     fill(255);
-    text(info, tx + padding, ty + padding, maxWidth, th);
+    textStyle(BOLD);
+    textSize(18);
+    text(n[selectedPoint], tx + padding, ty + padding);
+
+    // COUNTY (smaller, beside name)
+    let nameWidth = textWidth(n[selectedPoint]);
+    textStyle(NORMAL);
+    textSize(12);
+    fill(180);
+    text(cou[selectedPoint], tx + padding + nameWidth + 10, ty + padding + 4);
+
+    // DESCRIPTION (underneath, normal)
+    fill(255);
+    textSize(15);
+    text(desc[selectedPoint], tx + padding, ty + padding + 30, maxWidth, th);
   }
 }
 
@@ -96,11 +107,16 @@ function loadTableSites() {
 }
 
 function drawSites() {
-  fill('#2FA8FF');
   noStroke();
 
   for (let i = 0; i < datasites; i++) {
-    ellipse(x[i], y[i], 6, 6);
+    if (i === selectedPoint) {
+      fill('#F04E3E'); // active red
+      ellipse(x[i], y[i], 8.5, 8.5);
+    } else {
+      fill('#2FA8FF'); // inactive blue
+      ellipse(x[i], y[i], 6, 6);
+    }
   }
 }
 
