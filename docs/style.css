@@ -203,6 +203,43 @@ body {
 .menu-btn.active span:nth-child(3){
   transform: rotate(-45deg) translate(3px,-3px);
 }
+/*languge toggle*/
+.lang-toggle {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  gap: 6px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  padding: 6px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  background: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .lang-toggle {
+    top: 84px;
+    right: 30px;
+  }
+}
 /* CONTENT SECTION */
 .video {
   width: 100%;
