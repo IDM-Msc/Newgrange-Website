@@ -1,13 +1,43 @@
+//this is the javascript for the scrolling text track for Newgrange/Brú na Bóinne
 const title = document.querySelector('.hero-title');
-const items = document.querySelectorAll('.timeline-item');
+const track = document.getElementById('hero-track');
 
+// parallax scroll effect for title
 window.addEventListener('scroll', () => {
-  let scrollValue = window.scrollY;
-  title.style.transform = `translateY(${scrollValue * -0.5}px)`;
+  if (title) {
+    title.style.transform = `translateY(${window.scrollY * -0.5}px)`;
+  }
 });
 
-const track = document.getElementById("hero-track");
-track.innerHTML += track.innerHTML;
+if (track) {
+  const group = track.querySelector('.track-group');
+  let x = 0;
+  let groupWidth = 0;
+  const speed = 1;
+
+  const updateWidth = () => {
+    groupWidth = group.offsetWidth;
+  };
+
+  const animate = () => {
+    x -= speed;
+
+    // this resets the position so there is a seamless loop, initially the loop was visible
+    if (Math.abs(x) >= groupWidth) {
+      x += groupWidth;
+    }
+
+    track.style.transform = `translateX(${x}px)`;
+    requestAnimationFrame(animate);
+  };
+
+  if (group) {
+    track.append(group.cloneNode(true), group.cloneNode(true), group.cloneNode(true));
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    animate();
+  }
+}
 
 const timeline = document.querySelector('.timeline');
 const timelineProgress = document.querySelector('.timeline-progress');

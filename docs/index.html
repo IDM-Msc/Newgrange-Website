@@ -13,23 +13,42 @@
 <body>
 
 <section class="hero">
+<div class="hero">
   <div class="overlay">
     <div class="hero-content">
+
       <div class="top-decoration">
-        <img src="./img/top-decoration1.svg" alt="">
+        <img src="./img/top-decoration1.svg" alt="decoration">
       </div>
 
-      <div class="track">
-        <div class="hero-track" id="hero-track">
-          <span data-i18n data-en="BRÚ NA BÓINNE" data-ga="BRÚ NA BÓINNE" data-i18n data-en="BRÚ NA BÓINNE" data-ga="BRÚ NA BÓINNE">BRÚ NA BÓINNE</span>
-          <img src="./img/staricon.png" class="divider">
-          <span data-i18n data-en="NEWGRANGE" data-ga="NEWGRANGE" data-i18n data-en="NEWGRANGE" data-ga="NEWGRANGE">NEWGRANGE</span>
-          <img src="./img/staricon.png" class="divider">
-        </div>
-      </div>
-
-    <a href="https://brunaboinne.admit-one.eu/" class="hero-button" aria-label="Book a tour" data-i18n data-en="Book" data-ga="Cuir in Áirithe"> Book </a>
+<!--Scrolling Newgrange/Brú na Bóinne text -->
+<div class="track">
+  <div class="hero-track" id="hero-track">
+    <div class="track-group">
+      <span>BRÚ NA BÓINNE</span>
+      <img src="./img/staricon.png" class="divider" alt="">
+      <span>NEWGRANGE</span>
+      <img src="./img/staricon.png" class="divider" alt="">
+      <span>BRÚ NA BÓINNE</span>
+      <img src="./img/staricon.png" class="divider" alt="">
+      <span>NEWGRANGE</span>
+      <img src="./img/staricon.png" class="divider" alt="">
+    </div>
   </div>
+</div>
+
+      <a href="https://brunaboinne.admit-one.eu/" 
+         class="hero-button" 
+         aria-label="Book a tour" 
+         data-i18n 
+         data-en="Book" 
+         data-ga="Cuir in Áirithe">
+         Book
+      </a>
+
+    </div>
+  </div>
+</div>
 </section>
 
 <!--BURGER MENU-->
@@ -66,7 +85,7 @@
   </video>
 
       <div class="video-year">
-      <img src="./img/5200BC.svg">
+      <img src="./img/3200BC.svg">
     </div>
   </div>
 </section>
@@ -398,10 +417,12 @@
   <div class="solstice-illustration" id="solsticeIllustration">
     <img src="./img/solsticedrawing.png" class="solstice-base">
 
+<!-- for the light beam and glow -->
     <div class="solstice-beam"></div>
     <div class="solstice-glow"></div>
   </div>
 
+  <!-- toggle button that reveals solstice light path -->
   <div class="solstice-toggle-wrap">
     <button type="button" class="solstice-toggle" id="solsticeToggle">
       <span class="solstice-track"></span>

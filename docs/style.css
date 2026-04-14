@@ -544,37 +544,44 @@ body {
 }
 
 .track {
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .hero-track {
   display: flex;
-  align-items: center;
   width: max-content;
-  animation: scroll 10s linear infinite;
+  will-change: transform;
 }
 
-.hero-track span {
+.track-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.track-group span,
+.track-group img {
+  flex-shrink: 0;
+}
+
+.track-group span {
   font-family: 'Raflesia', serif;
   color: white;
-  white-space: nowrap;
-  font-size: clamp(3rem, 8vw, 10rem );
+  font-size: clamp(3rem, 8vw, 10rem);
   letter-spacing: 1rem;
   font-weight: 100;
   text-transform: uppercase;
-  text-align: center;
-  transition: transform 0.3s ease-out;
+  white-space: nowrap;
 }
 
 .divider {
   width: 40px;
   margin: 0 2rem;
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  display: block;
+  flex-shrink: 0;
 }
 
 /*History timeline*/
@@ -1568,20 +1575,20 @@ small {
   display: block;
 }
 
-/* solstice */
+/* Solstice animation */
 .solstice-illustration {
   position: relative;
   width: min(1200px, 92vw);
   margin: 0 auto 2.5rem;
 }
 
-/* IMAGE */
+/* Image */
 .solstice-base {
   width: 100%;
   display: block;
 }
 
-/* BEAM */
+/* Light beam */
 .solstice-beam {
   position: absolute;
   top: 61%;
@@ -1604,7 +1611,7 @@ small {
   transition: transform 2s ease, opacity 1s ease;
 }
 
-/* GLOW */
+/* Glow effect */
 .solstice-glow {
   position: absolute;
   top: 67%;
@@ -1625,7 +1632,7 @@ small {
   transition: all 1.5s ease 0.5s;
 }
 
-/* ACTIVE STATE */
+/* Active State */
 .solstice-illustration.active .solstice-beam {
   opacity: 1;
   transform: scaleX(1);
@@ -1636,7 +1643,7 @@ small {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
-/* BUTTON */
+/* Toggle Button */
 .solstice-toggle {
   position: relative;
   width: 120px;
